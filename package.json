@@ -4,6 +4,10 @@
   "description": "package in the root for running heroku",
   "main": "index.js",
   "scripts": {
+    "client-install": "npm install --prefix client",
+    "start": "node server.js",
+    "server": "nodemon server.js",
+    "client": "npm start --prefix client",
     "heroku-postbuild": "NPM_CONFIG_PRODUCTION=false npm isntall --prefix client && npm run build --prefix client"
   },
   "repository": {
