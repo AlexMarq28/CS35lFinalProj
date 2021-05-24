@@ -4,8 +4,7 @@
   "description": "package in the root for running heroku",
   "main": "index.js",
   "scripts": {
-    "start": "node server.js --prefix client",
-    "heroku-postbuild": "NPM_CONFIG_PRODUCTION=false npm run client-install && npm run build"
+    "heroku-postbuild": "NPM_CONFIG_PRODUCTION=false npm isntall --prefix client && npm run build --prefix client"
   },
   "repository": {
     "type": "git",
