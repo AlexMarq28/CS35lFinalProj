@@ -4,6 +4,7 @@
   "description": "package in the root for running heroku",
   "main": "index.js",
   "scripts": {
+    "start": "node server.js",
     "heroku-postbuild": "NPM_CONFIG_PRODUCTION=false npm run client-install && npm run build"
   },
   "repository": {
