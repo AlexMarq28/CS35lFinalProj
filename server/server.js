@@ -25,7 +25,7 @@ app.use("/api/items", items);
 if (process.env.NODE_ENV === "production") {
   //Set static folder
   //All the javascript and css files will be read and served from this folder
-  app.use(express.static("client/build"));
+  app.use(express.static("../client/build"));
   //Any request we get except /api/items should load up html
   app.get("*", (req, res) => {
     res.sendFile(path.resolve(__dirname, "../client", "build", "index.html"));
