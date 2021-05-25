@@ -3,17 +3,12 @@
   "version": "1.0.0",
   "description": "Server side of project",
   "main": "server.js",
-  "engine": {
-    "node": "14.16.10",
-    "npm": "6.14.11"
-  },
   "scripts": {
     "client-install": "npm install --prefix client",
-    "start": "node server/server.js",
-    "server": "nodemon server/server.js",
+    "start": "node server.js",
+    "server": "nodemon server.js",
     "client": "npm start --prefix client",
-    "dev": "concurrently \"npm run server\" \"npm run client\"",
-    "heroku-postbuild": "NPM_CONFIG_PRODUCTION=false npm install --prefix client && npm run build --prefix client"
+    "dev": "concurrently \"npm run server\" \"npm run client\""
   },
   "keywords": [],
   "author": "",
