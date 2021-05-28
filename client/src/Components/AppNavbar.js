@@ -35,17 +35,17 @@ class AppNavbar extends Component {
       <div>
         <Navbar color="dark" dark expand="sm" className="mb-5">
           <Container>
-            <NavbarBrand href="/">ExerciseList</NavbarBrand>
+            <NavbarBrand href="/" >Exercise Routine</NavbarBrand>
             <NavbarToggler onClick={this.toggle} />
             <Collapse isOpen={this.state.isOpen} navbar>
               <Nav className="ms-auto" navbar>
                 <NavItem>
                   <NavLink href="/">Home Page</NavLink>
                 </NavItem>
-		<NavItem>
+                <NavItem>
                   <NavLink href="/RegisterPage">Create a New Profile</NavLink>
                 </NavItem>
-		<NavItem>
+		            <NavItem>
                   <NavLink href="/LoginPage">Log in to Profile</NavLink>
                 </NavItem>
                 <NavItem>

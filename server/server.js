@@ -3,7 +3,7 @@ const mongoose = require("mongoose");
 const path = require("path");
 
 const items = require("./routes/api/items");
-//const photos =require("./routes/api/photos");
+const photos =require("./routes/api/photos");
 
 const app = express();
 
