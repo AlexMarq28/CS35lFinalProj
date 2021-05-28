@@ -55,7 +55,7 @@ class AppNavbar extends Component {
                   <NavLink href="/SearchPage">Search Profiles</NavLink>
                 </NavItem>
                 <NavItem>
-                  <NavLink href="https://github.com/44cjohnson">Github</NavLink>
+                  <NavLink href="https://github.com/44cjohnson/CS35lFinalProj">Github</NavLink>
                 </NavItem>
               </Nav>
             </Collapse>
