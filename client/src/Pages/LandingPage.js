@@ -4,7 +4,9 @@ import { Provider } from "react-redux"; //package that binds together react & re
 import store from "../store";
 import AppNavbar from "../Components/AppNavbar";
 import Exerciselist from "../Components/ExerciseList";
+import PhotoFrame from "../Components/PhotoFrame";
 import ItemModal from "../Components/ItemModal";
+import PhotoModal from "../Components/PhotoModal";
 import { Container } from "reactstrap";
 //import "./App.css";
 
@@ -15,7 +17,9 @@ export default function LandingPage() {
           <h1>Welcome to our Exercise Application</h1>
 	  <Container>
             <ItemModal />
+            <PhotoModal />
             <Exerciselist />
+            <PhotoFrame />
           </Container>
         </div>
       </Provider>);
