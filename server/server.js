@@ -3,6 +3,7 @@ const mongoose = require("mongoose");
 const path = require("path");
 
 const items = require("./routes/api/items");
+//const photos =require("./routes/api/photos");
 
 const app = express();
 
@@ -20,7 +21,7 @@ mongoose
 
 // Use Routes, anything that goes to /api/items should refer to items variable (the items file)
 app.use("/api/items", items);
-
+//app.use("/api/photos", photos);
 // // Serve static assets (would be build folder) if in production
 // if (process.env.NODE_ENV === "production") {
 //   //Set static folder
