@@ -40,10 +40,19 @@ class AppNavbar extends Component {
             <Collapse isOpen={this.state.isOpen} navbar>
               <Nav className="ms-auto" navbar>
                 <NavItem>
-                  <NavLink>Profile</NavLink>
+                  <NavLink href="/">Home Page</NavLink>
+                </NavItem>
+		<NavItem>
+                  <NavLink href="/RegisterPage">Create a New Profile</NavLink>
+                </NavItem>
+		<NavItem>
+                  <NavLink href="/LoginPage">Log in to Profile</NavLink>
                 </NavItem>
                 <NavItem>
-                  <NavLink>SearchBar</NavLink>
+                  <NavLink href="/MainProfilePage">Main Profile Page</NavLink>
+                </NavItem>
+                <NavItem>
+                  <NavLink href="/SearchPage">Search Profiles</NavLink>
                 </NavItem>
                 <NavItem>
                   <NavLink href="https://github.com/44cjohnson">Github</NavLink>

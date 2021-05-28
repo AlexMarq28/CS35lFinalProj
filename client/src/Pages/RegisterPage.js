@@ -1,58 +1,41 @@
-import React, { useState } from "react";
-import { Link } from "react-router-dom";
+//import React, { useState } from "react";
+//import { Link } from "react-router-dom";
+import { Provider } from "react-redux"; //package that binds together react & redux
+import store from "../store";
+import AppNavbar from "../Components/AppNavbar";
+import Exerciselist from "../Components/ExerciseList";
+import ItemModal from "../Components/ItemModal";
+import { Container } from "reactstrap";
+//import "./App.css";
 
-const mongodb = require('mongodb');
-//const { ClientEncryption } = require('mongodb-client-encryption');
-//const { MongoClient } = require('mongodb').MongoClient;
-//const mongoose = require('mongoose');
 
-//async function main(){
-    /**
-     * Connection URI. Update <username>, <password>, and <your-cluster-url> to reflect your cluster.
-     * See https://docs.mongodb.com/ecosystem/drivers/node/ for more details
-     */
-    //const uri = "mongodb+srv://OluchiApp:cs35l@cluster0.c8qdd.mongodb.net/ExerciseProfiles?retryWrites=true&w=majority";
- 
-   // mongoose.connect(uri, {
-   //     
- //   })
-    //const client = new MongoClient(uri);
- 
-    //try {
-        // Connect to the MongoDB cluster
- //       await client.connect();
- 
-        // Make the appropriate DB calls
-  //      await  listDatabases(client);
- 
-  //  } catch (e) {
- //       console.error(e);
-  //  } finally {
-   //     await client.close();
-  //  }
-//}
+
+
+
+
 
 //main().catch(console.error);
 
 export default function RegisterPage() {
-    const [userName, setUserName] = useState("");
-    const [passWord, setPassWord] = useState("");
+  //  const [userName, setUserName] = useState("");
+   // const [passWord, setPassWord] = useState("");
 
-    const createProfile = (e) => {
-        e.preventDefault();
-        fetch('http://localhost:4000/createProfile', {
-            method: 'POST',
-            headers: {
-                "Content-Type": "application/json",
-            },
-            body: JSON.stringify({
-                userName,
-                passWord
-            }),
-        });
-    };
 
-    return <div>
+
+    return (<Provider store={store}>
+        <div className="App">
+          <AppNavbar />
+ 	  <h1>Create a new profile</h1>
+          <Container>
+            <ItemModal />
+            <Exerciselist />
+          </Container>
+        </div>
+      </Provider>);
+
+
+
+/*<div>
         <h1>Create a new profile</h1>
         <form onSubmit={createProfile}>
             <input 
@@ -68,5 +51,5 @@ export default function RegisterPage() {
         <Link to="/LoginPage">Login to your profile</Link><br />
         <Link to="/MainProfilePage">Return to your profile</Link><br />
         <Link to="/SearchPage">Search profiles</Link>
-        </div>;
-}
+        </div>;*/
+};
