@@ -1,26 +1,19 @@
-/* ----------------------------------------------------------------------------------------------------*/
 /* Ernest (1:30PM 5/29/2021)
 Description:
-NewUser has been updated with a better implementation of the text fields.
+LoginUser.js has the same implementation as NewUser.js, but with fewer text-fields, as a continuing user only needs
+to enter his email and password to log in.
 */
 
+
 import React, { Component } from 'react';
-import './NewUser.css';
+import './LoginUser.css';
 
 import { Button, Form, FormGroup, Label, Input } from 'reactstrap';
 
-class NewUser extends Component {
+class loginUser extends Component {
     render() {
         return(
             <Form>
-                <FormGroup className="login-form">
-                    <Label className="label">Name</Label>
-                    <Input type="name" placeholder="Joe Bruin"/>
-                </FormGroup>
-                <FormGroup className="login-form">
-                    <Label className="label">Username</Label>
-                    <Input type="username" placeholder="joebruin2021"/>
-                </FormGroup>
                 <FormGroup className="login-form">
                     <Label className="label">Email</Label>
                     <Input type="email" placeholder="joebruin@ucla.edu"/>
@@ -31,7 +24,7 @@ class NewUser extends Component {
                 </FormGroup> 
                 <Form className="buttonForm">
                 <Button className="button" color="secondary" size="lg">
-                    Sign up
+                    Log in
                 </Button>
                 </Form>
 
@@ -40,23 +33,24 @@ class NewUser extends Component {
     }
 }
 
-export default NewUser;
+export default loginUser;
 
-/* ----------------------------------------------------------------------------------------------------*/
-/* Ernest (4:00PM 5/28/2021)
+
+
+
+/* Ernest (8:05PM 5/28/2021)
 Description:
-The following code is reserved for exclusive use in 'RegisterPage'.
-It returns text-fields for the user to enter their email, username, and password.
+The following code is reserved for exclusive use in 'LoginPage'.
+It returns text-fields for the returning users to enter their email and password to log in.
 It has not yet been configured to do anything else but output the text-fields and a button.
 Implementation will come later.
-*/
-/* ----------------------------------------------------------------------------------------------------*/
 
+*/
 /*
 import React from 'react';
 import { Container, Row, Col, Button, Form, FormGroup, Label, Input, FormText } from 'reactstrap';
 
-const NewUser = (props) => {
+const LoginUser = (props) => {
   return (
     <Container>
       <Row style={{padding: '10px'}}>
@@ -73,30 +67,21 @@ const NewUser = (props) => {
         <Col sm="12" md={{ size: 4, offset: 4 }}>
           <Form>
             <FormGroup>
-              <Label for="Username">Username</Label>
-              <Input type="username" name="username" id="username" placeholder="Joe Bruin" />
-            </FormGroup>
-          </Form>
-        </Col>
-      </Row>
-      <Row style={{padding: '10px'}}>
-        <Col sm="12" md={{ size: 4, offset: 4 }}>
-          <Form>
-            <FormGroup>
               <Label for="Password">Password</Label>
               <Input type="password" name="password" id="password" placeholder="********" />
             </FormGroup>
           </Form>
         </Col>
       </Row >
-      <Row style={{padding: '10px'}}>
+      <Row style={{padding: '20px'}}>
         <Col sm="12" md={{ size: 4, offset: 4 }}>
-          <Button>Create Account</Button>
+          <Button color="primary" size="lg">Log in</Button>
         </Col>
       </Row >
     </Container>
   );
 }
 
-export default NewUser;
+export default LoginUser;
 */
+

@@ -1,11 +1,7 @@
-/* ----------------------------------------------------------------------------------------------------*/
 /* Ernest (1:30PM 5/29/2021)
 Description:
-NewUser.css has been updated with classNames login-form, label, buttonForm, and button.
-All classNames exclusively modify components in NewUser.js
+LoginUser.css is identical to NewUser.css.
 */
-/* ----------------------------------------------------------------------------------------------------*/
-
 
 .login-form {
     width: 100%;

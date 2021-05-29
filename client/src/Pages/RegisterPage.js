@@ -1,13 +1,3 @@
-//import React, { useState } from "react";
-//import { Link } from "react-router-dom";
-import { Provider } from "react-redux"; //package that binds together react & redux
-import store from "../store";
-import AppNavbar from "../Components/AppNavbar";
-//import Exerciselist from "../Components/ExerciseList";
-//import ItemModal from "../Components/ItemModal";
-import { Container } from "reactstrap";
-
-
 /* ----------------------------------------------------------------------------------------------------*/
 /*Ernest (4:25PM 5/28/2021)
 Description:
@@ -19,13 +9,31 @@ import NewUser from "../Components/NewUser/NewUser.js";
 /* ----------------------------------------------------------------------------------------------------*/
 
 
+//import React, { useState } from "react";
+//import { Link } from "react-router-dom";
+import { Provider } from "react-redux"; //package that binds together react & redux
+import store from "../store";
+import AppNavbar from "../Components/AppNavbar";
+import Exerciselist from "../Components/ExerciseList";
+import ItemModal from "../Components/ItemModal";
+import { Container } from "reactstrap";
+
 //import "./App.css";
-
-
 
 //main().catch(console.error);
 
+
+export default function RegisterPage() {
+  return (<Provider store={store}>
+      <div className="App">
+        <AppNavbar />
+   <h1 style={{padding: '10px'}}>Create an account</h1>
+     <NewUser />
+      </div>
+    </Provider>);
+};
 //Updated function by Ernest (4:32PM, 5/28/2021)
+/*
 export default function RegisterPage() {
     return (<Provider store={store}>
         <div className="App">
@@ -36,7 +44,8 @@ export default function RegisterPage() {
       </Container>
         </div>
       </Provider>);
-
+};
+*/
   //  const [userName, setUserName] = useState("");
    // const [passWord, setPassWord] = useState("");
 
@@ -56,6 +65,7 @@ export default function RegisterPage() {
           </Container>
         </div>
       </Provider>);
+};
 */
 
 
@@ -76,4 +86,3 @@ export default function RegisterPage() {
         <Link to="/MainProfilePage">Return to your profile</Link><br />
         <Link to="/SearchPage">Search profiles</Link>
         </div>;*/
-};
