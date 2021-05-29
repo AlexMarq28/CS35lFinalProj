@@ -13,6 +13,9 @@ import {
 import { connect } from "react-redux";
 import { addPhoto } from "../actions/photoActions";
 //var fs = require ('fs');
+const path = require("path");
+const multer = require("multer");
+const crypto = require('crypto');
 
 class PhotoModal extends Component {
   state = {
