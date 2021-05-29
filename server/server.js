@@ -1,14 +1,22 @@
 const express = require("express");
 const mongoose = require("mongoose");
 const path = require("path");
-
+const bodyParser = require("body-parser");
 const items = require("./routes/api/items");
 const photos =require("./routes/api/photos");
-
+//const ejs = require("ejs");
 const app = express();
+
+
+
 
 // Bodyparser middleware is within express
 app.use(express.json());
+
+
+
+//EJS
+//app.set('view engine', 'ejs');
 
 // Database Config
 const db = require("./config/keys").mongoURI;
@@ -23,14 +31,14 @@ mongoose
 app.use("/api/items", items);
 app.use("/api/photos", photos);
 // // Serve static assets (would be build folder) if in production
-// if (process.env.NODE_ENV === "production") {
+ if (process.env.NODE_ENV === "production") {
 //   //Set static folder
 //   //All the javascript and css files will be read and served from this folder
-//   app.use(express.static("client/build"));
+   app.use(express.static("../client/build"));
 //   //Any request we get except /api/items should load up html
-//   app.get("*", (req, res) => {
-//     res.sendFile(path.resolve(__dirname, "../client", "build", "index.html"));
-//   });
+   app.get("*", (req, res) => {
+     res.sendFile(path.resolve(__dirname, "../client", "build", "index.html"));
+   });
 // }
 
 // Creating variable for the port, env.PORT is an environmental variable

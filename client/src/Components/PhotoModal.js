@@ -6,6 +6,7 @@ import {
   ModalBody,
   Form,
   FormGroup,
+  FormText,
   Label,
   Input,
 } from "reactstrap";
@@ -16,8 +17,8 @@ import { addPhoto } from "../actions/photoActions";
 class PhotoModal extends Component {
   state = {
     modal: false,
-    photoLocation: "",
     photoCaption: "",
+    img: undefined 
   };
 
   toggle = () => {
@@ -34,8 +35,9 @@ class PhotoModal extends Component {
     e.preventDefault();
 
     const newPhoto = {
-      photoLocation: this.state.photoLocation,
+    //  photoLocation: this.state.photoLocation,
       photoCaption: this.state.photoCaption,
+      img: this.state.img
     };
 
     // Add photo via the add photo action
@@ -62,13 +64,7 @@ class PhotoModal extends Component {
             <Form onSubmit={this.onSubmit}>
               <FormGroup>
                 <Label for="photo">Photo</Label>
-                <Input
-                  type="text"
-                  name="photoLocation"
-                  id="photo"
-                  placeholder="Add exercise photo location"
-                  onChange={this.onChange}
-                ></Input>
+                
                 <Input
                   type="text"
                   name="photoCaption"
@@ -76,6 +72,10 @@ class PhotoModal extends Component {
                   placeholder="Include a caption"
                   onChange={this.onChange}
                 ></Input>
+                <Input type="file" name="img" id="photo" formEncType="multipart/form-data" />
+                <FormText color="muted">
+                  Select a photo from your local system
+                </FormText>
                 <Button color="dark" style={{ marginTop: "2rem" }} block>
                   Add Photo
                 </Button>
@@ -93,3 +93,12 @@ const mapStateToProps = (state) => ({
 });
 
 export default connect(mapStateToProps, { addPhoto })(PhotoModal);
+
+
+
+               /*<Input type="text"
+                  name="photoLocation"
+                  id="photo"
+                  placeholder="Add exercise photo location"
+                  onChange={this.onChange}
+                ></Input>*/

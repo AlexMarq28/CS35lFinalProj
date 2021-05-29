@@ -1,15 +1,29 @@
 const express = require("express");
 var fs = require("fs");
 const router = express.Router();
-var multer = require("multer");
-const upload = multer({dest: "uploads/"});
+
+//const upload = multer({dest: "uploads/"});
 const path = require("path");
-//const ejs = require("ejs");
-const storage = multer.diskStorage({
-  detination: './public/uploads/'
-});
+
+
 // Item Model (bring in item model)
 const Photo = require("../../models/Photo");
+
+var multer = require("multer");
+const storage = multer.diskStorage({
+  destination: './public/uploads/',
+  filename: function(req, file, cb){
+    cb(null, file.fieldname + '-' + Date.now() + path.extname(file.originalname));
+  }
+});
+
+const upload = multer({
+  storage: storage
+});
+
+
+//public folder setup
+router.use(express.static('./public'));
 
 // @route GET request to api/photos
 // @desc Get All Photos
@@ -17,24 +31,25 @@ const Photo = require("../../models/Photo");
 
 //the slash represents endpoint of api/items, already in correct file
 router.get("/", (req, res) => {
+
+  res.render('index');
   //want to fetch items from database
-  Photo.find()
+ /* Photo.find()
     .sort({ date: -1 }) // will sort in descending order
-    .then((photos) => res.json(photos)); //will fetch items from database
+    .then((photos) => res.json(photos));*/ //will fetch items from database
 });
 
 // @route POST request to api/photos
 // @desc Create A Photo
 // @access Public
-
+//upload.single(),
 //the slash represents endpoint of api/photos, already in correct file
-router.post("/", upload.single("img"), (req, res) => {
+router.post("/",  (req, res) => {
   //want to construct an item to insert into the database
   //pass in an object to new Item, name will come from request
   const newPhoto = new Photo({
-    photoLocation: req.body.photoLocation,
     photoCaption: req.body.photoCaption,
-    img: fs.readFileSync(req.body.photoLocation),
+    img: req.body.img
   });
   //date is automatically inserted
 

@@ -3,12 +3,8 @@ const Schema = mongoose.Schema;
 
 //Creating a schema
 const PhotoSchema = new Schema({
-  photoLocation: {
-    type: String,
-    required: true
-  },
   img: {
-    data: Buffer,
+    type: Buffer,
   },
   photoCaption: {
     type: String,
