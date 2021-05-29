@@ -11,12 +11,13 @@ import {
 } from "reactstrap";
 import { connect } from "react-redux";
 import { addPhoto } from "../actions/photoActions";
-var fs = require ('fs');
+//var fs = require ('fs');
 
 class PhotoModal extends Component {
   state = {
     modal: false,
-    name: "",
+    photoLocation: "",
+    photoCaption: "",
   };
 
   toggle = () => {
@@ -35,7 +36,6 @@ class PhotoModal extends Component {
     const newPhoto = {
       photoLocation: this.state.photoLocation,
       photoCaption: this.state.photoCaption,
-      img: fs.readFile(this.state.photoLocation)
     };
 
     // Add photo via the add photo action

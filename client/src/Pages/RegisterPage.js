@@ -3,8 +3,8 @@
 import { Provider } from "react-redux"; //package that binds together react & redux
 import store from "../store";
 import AppNavbar from "../Components/AppNavbar";
-import Exerciselist from "../Components/ExerciseList";
-import ItemModal from "../Components/ItemModal";
+//import Exerciselist from "../Components/ExerciseList";
+//import ItemModal from "../Components/ItemModal";
 import { Container } from "reactstrap";
 
 

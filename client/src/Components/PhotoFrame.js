@@ -28,7 +28,7 @@ class PhotoFrame extends Component {
       <Container>
         <ListGroup>
           <TransitionGroup className="photo-frame">
-            {photos.map(({ _id, img, photoCaption }) => (
+            {photos.map(({ _id, img, photoCaption, photoLocation }) => (
               <CSSTransition key={_id} timeout={500} classNames="fade">
                 <ListGroupItem>
                   <Button
@@ -42,6 +42,7 @@ class PhotoFrame extends Component {
                   </Button>
                   {img}
                   {photoCaption}
+                  {photoLocation}
                 </ListGroupItem>
               </CSSTransition>
             ))}

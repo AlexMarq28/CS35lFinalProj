@@ -15,17 +15,17 @@ export default function LandingPage() {
         <div className="App">
           <AppNavbar />
           <h1>Welcome to our Exercise Application</h1>
-	  <Container>
+	        <Container>
             <ItemModal />
             <PhotoModal />
             <Exerciselist />
-            <PhotoFrame />
+            
           </Container>
         </div>
       </Provider>);
 
 
-
+/*<PhotoFrame />*/
 
 
         /*<div>

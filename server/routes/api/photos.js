@@ -1,7 +1,13 @@
 const express = require("express");
 var fs = require("fs");
 const router = express.Router();
-
+var multer = require("multer");
+const upload = multer({dest: "uploads/"});
+const path = require("path");
+//const ejs = require("ejs");
+const storage = multer.diskStorage({
+  detination: './public/uploads/'
+});
 // Item Model (bring in item model)
 const Photo = require("../../models/Photo");
 
@@ -21,8 +27,8 @@ router.get("/", (req, res) => {
 // @desc Create A Photo
 // @access Public
 
-//the slash represents endpoint of api/items, already in correct file
-router.post("/", (req, res) => {
+//the slash represents endpoint of api/photos, already in correct file
+router.post("/", upload.single("img"), (req, res) => {
   //want to construct an item to insert into the database
   //pass in an object to new Item, name will come from request
   const newPhoto = new Photo({
@@ -34,7 +40,7 @@ router.post("/", (req, res) => {
 
   //save object to database, promise-based(asychronous function that lets you do something
   //if it succeeds and do something else if it fails)
-  newItem.save().then((photo) => res.json(photo));
+  newPhoto.save().then((photo) => res.json(photo));
 });
 
 // @route DELETE request to api/items/:id
