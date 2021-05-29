@@ -1,8 +1,7 @@
 const express = require("express");
 const mongoose = require("mongoose");
 const path = require("path");
-
-const items = require("./routes/api/items");
+const config = require("config");
 
 const app = express();
 
@@ -10,16 +9,22 @@ const app = express();
 app.use(express.json());
 
 // Database Config
-const db = require("./config/keys").mongoURI;
+const db = config.get("mongoURI");
 
 // Connect to MongoDB, use mongoose
 mongoose
-  .connect(db, { useNewUrlParser: true, useUnifiedTopology: true })
+  .connect(db, {
+    useNewUrlParser: true,
+    useCreateIndex: true,
+    useUnifiedTopology: true,
+  })
   .then(() => console.log("MongoDB Connected...")) //if you connect then...
   .catch((err) => console.log(err));
 
-// Use Routes, anything that goes to /api/items should refer to items variable (the items file)
-app.use("/api/items", items);
+// Use Routes, anything that goes to /api/something should refer to the respective variable (the items, users, etc. file)
+app.use("/api/items", require("./routes/api/items"));
+app.use("/api/users", require("./routes/api/users"));
+app.use("/api/auth", require("./routes/api/auth"));
 
 // Serve static assets (would be build folder) if in production
 if (process.env.NODE_ENV === "production") {
