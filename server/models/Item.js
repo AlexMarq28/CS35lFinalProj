@@ -11,6 +11,28 @@ const ItemSchema = new Schema({
     type: Date,
     default: Date.now,
   },
+  
+   author: {
+    type: String,
+    required: true,
+   description: {
+    type: String,
+    required: true,
+  },
+   likes: {
+       type: Integer,
+       default: 0,
+   },
+     numSessions: {
+       type: Integer,
+       defualt: 0,
+   },
+     photo: {
+       type: photoSchema,
+       preferences: {type photoSchema, default : /* default image or pattern of bits will be added here*/}
+       
 });
+   
+
 
 module.exports = Item = mongoose.model("item", ItemSchema);
