@@ -29,9 +29,10 @@ const ItemSchema = new Schema({
    },
      photo: {
        type: photoSchema,
-       preferences: {type photoSchema, default : /* default image or pattern of bits will be added here*/}
-       
-});
+       required: true,
+      }
+     
+     );
    
 
 
