@@ -39,7 +39,7 @@ app.use("/api/photos", photos);
    app.get("*", (req, res) => {
      res.sendFile(path.resolve(__dirname, "../client", "build", "index.html"));
    });
-// }
+  }
 
 // Creating variable for the port, env.PORT is an environmental variable
 const port = process.env.PORT || 5000;
