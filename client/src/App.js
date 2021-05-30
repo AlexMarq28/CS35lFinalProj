@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useEffect } from "react";
 //import AppNavbar from "./Components/AppNavbar";
 //import Exerciselist from "./Components/ExerciseList";
 //import ItemModal from "./Components/ItemModal";
@@ -18,13 +18,16 @@ import LandingPage from "./Pages/LandingPage";
 import MainProfilePage from "./Pages/MainProfilePage";
 
 //import { Provider } from "react-redux"; //package that binds together react & redux
-//import store from "./store";
+import store from "./store";
 import { loadUser } from "./actions/authActions";
 
 import "bootstrap/dist/css/bootstrap.min.css";
 import "./App.css";
 
 function App() {
+  useEffect(() => {
+    store.dispatch(loadUser());
+  });
   return (
     <div className="App">
       <Router>
