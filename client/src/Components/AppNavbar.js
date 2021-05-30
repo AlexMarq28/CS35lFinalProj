@@ -50,7 +50,16 @@ class AppNavbar extends Component {
           </span>
         </NavItem>
         <NavItem>
+          <NavLink href="/">Home Page</NavLink>
+        </NavItem>
+        <NavItem>
+          <NavLink href="/SearchPage">Search Profiles</NavLink>
+        </NavItem>
+        <NavItem>
           <Logout />
+        </NavItem>
+        <NavItem>
+          <NavLink href="https://github.com/44cjohnson">Github</NavLink>
         </NavItem>
       </Fragment>
     );
@@ -70,7 +79,7 @@ class AppNavbar extends Component {
       <div>
         <Navbar color="dark" dark expand="sm" className="mb-5">
           <Container>
-            <NavbarBrand href="/">ExerciseList</NavbarBrand>
+            <NavbarBrand href="/">Exercise Routine</NavbarBrand>
             <NavbarToggler onClick={this.toggle} />
             <Collapse isOpen={this.state.isOpen} navbar>
               <Nav className="ms-auto" navbar>

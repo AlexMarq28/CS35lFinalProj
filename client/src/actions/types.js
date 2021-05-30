@@ -13,3 +13,8 @@ export const REGISTER_SUCCESS = "REGISTER_SUCCESS";
 export const REGISTER_FAIL = "REGISTER_FAIL";
 export const GET_ERRORS = "GET_ERRORS";
 export const CLEAR_ERRORS = "CLEAR_ERRORS";
+
+export const GET_PHOTOS = "GET_PHOTOS";
+export const ADD_PHOTO = "ADD_PHOTO";
+export const DELETE_PHOTO = "DELETE_PHOTO";
+export const PHOTOS_LOADING = "PHOTOS_LOADING";

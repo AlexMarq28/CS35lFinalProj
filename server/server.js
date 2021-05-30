@@ -44,3 +44,6 @@ const port = process.env.PORT || 5000;
 
 //listen on the port
 app.listen(port, () => console.log(`Server started on port: ${port}`));
+
+//FORMAT FOR BACKEND URI
+//"mongodb+srv://anyUser:anyWord@cluster0.c8qdd.mongodb.net/ExerciseProfiles?retryWrites=true&w=majority"
