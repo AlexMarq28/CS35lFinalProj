@@ -1,8 +1,8 @@
 const express = require("express");
 const mongoose = require("mongoose");
 const path = require("path");
+const items = require("./routes/api/items");
 const config = require("config");
-
 const app = express();
 
 // Bodyparser middleware is within express
@@ -13,6 +13,7 @@ app.use(express.json());
 
 // Database Config
 const db = config.get("mongoURI");
+//const db = require("./config/keys").mongoURI;
 
 // Connect to MongoDB, use mongoose
 mongoose
