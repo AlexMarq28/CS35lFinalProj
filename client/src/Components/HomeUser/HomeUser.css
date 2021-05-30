@@ -31,7 +31,7 @@ LoginUser.css is identical to NewUser.css.
 
 .button {    
     width: 100%;
-    max-width: 320px;
+    max-width: 30px;
     height: 100%;
 }
 
@@ -48,3 +48,9 @@ input {
     background: transparent;
     border-bottom: 1px solid black;
   }
+
+  .font-link {
+    font-family: 'Amiri', serif;
+}
+
+  

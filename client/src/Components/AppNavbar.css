@@ -1,4 +1,10 @@
 /* ----------------------------------------------------------------------------------------------------*/
+/* Ernest (8:42AM, 5/30/2021)
+Update: 
+Added additional css stylesheets to update the fonts used for the brand.
+/* ----------------------------------------------------------------------------------------------------*/
+
+/* ----------------------------------------------------------------------------------------------------*/
 /* Ernest (5:02PM 5/29/2021)
 Description:
 I've added this CSS file to help format the Nav-link icons.
@@ -17,4 +23,26 @@ I've added this CSS file to help format the Nav-link icons.
     padding: 15px;
     margin: auto;
     height: 100%;
+}
+
+.font-link {
+    font-family: 'Amiri', serif;
+    /*font-family: 'Londrina Outline', cursive;*/
+    /*font-family: 'Contrail One', cursive;*/
+    /*font-family: 'Fugaz One', cursive;*/
+
+}
+
+.font-link2 {
+    font-family: 'Racing Sans One', cursive;
+}
+
+.navbarBrand {
+    margin-top: -5px;
+    margin-bottom: -5px;
+}
+
+.logo {
+    margin-right: 20px;
+    margin-top: -5px;
 }

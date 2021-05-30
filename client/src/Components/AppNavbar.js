@@ -8,7 +8,7 @@ IMPORTANT:
 Please install react-icons as such before attempting to run, otherwise you'll run into compile errors:
 Ernests-MBP:client ernestkim$ npm install react-icons
 */
-import { FaUser, FaHome, FaGithub, FaSearch } from "react-icons/fa";
+import { FaShoePrints, FaUser, FaHome, FaGithub, FaSearch } from "react-icons/fa";
 import './AppNavbar.css';
 /* ----------------------------------------------------------------------------------------------------*/
 
@@ -50,7 +50,12 @@ class AppNavbar extends Component {
       <div>
         <Navbar color="dark" dark expand="sm" className="mb-5">
           <Container>
-            <NavbarBrand href="/" >Exercise Routine</NavbarBrand>
+            <div className="navbarBrand" >
+              <NavbarBrand className="font-link" href="/" style={{ fontSize: 36}}>
+              <FaShoePrints className="logo" size="1em"/>
+              milestone
+              </NavbarBrand>
+            </div>
             <NavbarToggler onClick={this.toggle} />
             <Collapse isOpen={this.state.isOpen} navbar>
               <Nav className="ms-auto" navbar>
