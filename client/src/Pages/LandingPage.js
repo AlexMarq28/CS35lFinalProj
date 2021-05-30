@@ -10,18 +10,28 @@ import PhotoModal from "../Components/PhotoModal";
 import { Container } from "reactstrap";
 //import "./App.css";
 
+//import Background from "../img/background.jpg";
+import './LandingPage.css';
+
 export default function LandingPage() {
     return (<Provider store={store}>
-        <div className="App">
-          <AppNavbar />
-          <h1>Welcome to our Exercise Application</h1>
-	        <Container>
-            <ItemModal />
-            <PhotoModal />
-            <Exerciselist />
-            
-          </Container>
+      <div
+        class="landingPageBackground"
+      >
+        <div className = "login">
+            <div className="App">
+              <AppNavbar />
+              <h1>Welcome to our Exercise Application</h1>
+              <Container>
+                <ItemModal />
+                <PhotoModal />
+                <Exerciselist />
+                
+              </Container>
+            </div>
         </div>
+      </div>
+
       </Provider>);
 
 

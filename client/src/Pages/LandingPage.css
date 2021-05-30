@@ -1,0 +1,14 @@
+/* ----------------------------------------------------------------------------------------------------*/
+/*Ernest (3:28PM 5/29/2021)
+Update:
+I've added some CSS here for a background image within 'LandingPage', although it's not coming out quite like I'd hoped.
+Due seemingly to size restrictions set outside of 'LandingPage.js', the image is cut off at the bottom.
+Will continue to work on it.
+*/
+/* ----------------------------------------------------------------------------------------------------*/
+
+.landingPageBackground {
+    background: url("https://www.w3schools.com/cssref/mountain.jpg") no-repeat; background-size: cover;
+    min-width: 100%;
+    min-height: 100%;
+  }

@@ -1,31 +1,23 @@
-// checks to make sure user is allowed to do some action/checks user is legit (i.e edit, delete, like, etc)
-// when implement user actions, we'll need to include this later in the routes for the actions
+const config = require("config");
+const jwt = require("jsonwebtoken");
 
-import jwt from "jsonwebtoken";
+//get token sent from react/postman
+function auth(req, res, next) {
+  const token = req.header("x-auth-token");
 
-const secret = 'test';
+  //Check for token
+  if (!token)
+    return res.status(401).json({ msg: "No token, authorization denied" });
 
-const auth = async (req, res, next) => {
   try {
-    const token = req.headers.authorization.split(" ")[1];
-    const isCustomAuth = token.length < 500;
-
-    let decodedData;
-
-    if (token && isCustomAuth) {      
-      decodedData = jwt.verify(token, secret);
-
-      req.userId = decodedData?.id;
-    } else { // for google logins if we want to implement later
-      decodedData = jwt.decode(token);
-
-      req.userId = decodedData?.sub;
-    }    
-
+    //Verify token
+    const decoded = jwt.verify(token, config.get("jwtSecret"));
+    //Add user from payload
+    req.user = decoded;
     next();
-  } catch (error) {
-    console.log(error);
+  } catch (e) {
+    res.status(400).json({ msg: "Token is not valid " });
   }
-};
+}
 
-export default auth;
+module.exports = auth;
