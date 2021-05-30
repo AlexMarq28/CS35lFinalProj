@@ -23,11 +23,15 @@ import SearchPage from './Pages/SearchPage';
 
 import { Provider } from "react-redux"; //package that binds together react & redux
 import store from "./store";
+import { loadUser } from "./actions/authActions";
 
 import "bootstrap/dist/css/bootstrap.min.css";
 import "./App.css";
 
 class App extends Component {
+  componentDidMount() {
+    store.dispatch(loadUser());
+  }
   render() {
     return (
       //can access state from our components, provides provides it
