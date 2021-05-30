@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useEffect } from "react";
 //import AppNavbar from "./Components/AppNavbar";
 //import Exerciselist from "./Components/ExerciseList";
 //import ItemModal from "./Components/ItemModal";
@@ -13,22 +13,21 @@ All we need to do is to set up all the links in the 'App' function to jump to ea
 After we set that up, we can work on how we want each page to look.
 Link: https://www.youtube.com/watch?v=yQf1KbGiwiI
 */
-import { BrowserRouter as Router, Switch, Route} from "react-router-dom";
+import { BrowserRouter as Router, Switch, Route } from "react-router-dom";
 import LandingPage from "./Pages/LandingPage";
-import LoginPage from "./Pages/LoginPage";
-import RegisterPage from "./Pages/RegisterPage";
-import SearchPage from "./Pages/SearchPage";
 import MainProfilePage from "./Pages/MainProfilePage";
 
 //import { Provider } from "react-redux"; //package that binds together react & redux
-//import store from "./store";
+import store from "./store";
+import { loadUser } from "./actions/authActions";
 
 import "bootstrap/dist/css/bootstrap.min.css";
 import "./App.css";
 
-
-
 function App() {
+  useEffect(() => {
+    store.dispatch(loadUser());
+  });
   return (
     <div className="App">
       <Router>
@@ -36,27 +35,27 @@ function App() {
           <Route exact path="/">
             <LandingPage />
           </Route>
-          <Route exact path="/RegisterPage">
-            <RegisterPage />
-            </Route>
           <Route exact path="/MainProfilePage">
             <MainProfilePage />
-            </Route>
-          <Route exact path="/SearchPage">
-            <SearchPage />
-            </Route>
-          <Route exact path="/LoginPage">
-            <LoginPage />
-            </Route>
+          </Route>
         </Switch>
       </Router>
     </div>
   );
 }
 
+//FUTURE PAGES
+/*
+          <Route exact path="/SearchPage">
+            <SearchPage />
+          </Route>
+*/
 
 /*
 class App extends Component {
+  componentDidMount() {
+    store.dispatch(loadUser());
+  }
   render() {
     return (
       //can access state from our components, provides provides it

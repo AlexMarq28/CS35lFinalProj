@@ -8,12 +8,10 @@ IMPORTANT:
 Please install react-icons as such before attempting to run, otherwise you'll run into compile errors:
 Ernests-MBP:client ernestkim$ npm install react-icons
 */
-import { FaShoePrints, FaUser, FaHome, FaGithub, FaSearch } from "react-icons/fa";
-import './AppNavbar.css';
+import { FaUser, FaHome, FaGithub, FaSearch } from "react-icons/fa";
+import "./AppNavbar.css";
 /* ----------------------------------------------------------------------------------------------------*/
-
-import React, { Component } from "react";
-
+import React, { Component, Fragment } from "react";
 import {
   Collapse,
   Navbar,
@@ -24,6 +22,11 @@ import {
   NavLink,
   Container,
 } from "reactstrap";
+import { connect } from "react-redux";
+import PropTypes from "prop-types";
+import RegisterModal from "./auth/RegisterModal";
+import LoginModal from "./auth/LoginModal";
+import Logout from "./auth/Logout";
 
 class AppNavbar extends Component {
   state = {
@@ -33,6 +36,10 @@ class AppNavbar extends Component {
     this.setState({
       isOpen: !this.state.isOpen,
     });
+  };
+
+  static propTypes = {
+    auth: PropTypes.object.isRequired,
   };
 
   //Info for navbar below
@@ -46,37 +53,54 @@ class AppNavbar extends Component {
   //  and within it give a Nav with a "ml-auto", margin-left auto which alligns left automatically
 
   render() {
+    const { isAuthenticated, user } = this.props.auth;
+
+    const authLinks = (
+      <Fragment>
+        <NavItem>
+          <span className="navbar-text mr-4">
+            <strong>{user ? `Welcome ${user.name}` : ""}</strong>
+          </span>
+        </NavItem>
+        <NavItem>
+          <NavLink href="/">Home Page</NavLink>
+        </NavItem>
+        <NavItem className="icons">
+          <NavLink href="/SearchPage">
+            <FaSearch size="1.2em" />
+          </NavLink>
+        </NavItem>
+        <NavItem>
+          <Logout />
+        </NavItem>
+        <NavItem className="icons">
+          <NavLink href="https://github.com/44cjohnson/CS35lFinalProj">
+            <FaGithub size="1.2em" />
+          </NavLink>
+        </NavItem>
+      </Fragment>
+    );
+
+    const guestLinks = (
+      <Fragment>
+        <NavItem>
+          <RegisterModal></RegisterModal>
+        </NavItem>
+        <NavItem>
+          <LoginModal></LoginModal>
+        </NavItem>
+      </Fragment>
+    );
+
     return (
       <div>
         <Navbar color="dark" dark expand="sm" className="mb-5">
           <Container>
-            <div className="navbarBrand" >
-              <NavbarBrand className="font-link" href="/" style={{ fontSize: 36}}>
-              <FaShoePrints className="logo" size="1em"/>
-              milestone
-              </NavbarBrand>
-            </div>
+            <NavbarBrand href="/">Exercise Routine</NavbarBrand>
             <NavbarToggler onClick={this.toggle} />
             <Collapse isOpen={this.state.isOpen} navbar>
               <Nav className="ms-auto" navbar>
-                <NavItem className="icons">
-                  <NavLink href="/"><FaHome size="1.2em"/></NavLink>
-                </NavItem>
-                <NavItem>
-                  <NavLink href="/RegisterPage">Create a New Profile</NavLink>
-                </NavItem>
-		            <NavItem>
-                  <NavLink href="/LoginPage">Log in to Profile</NavLink>
-                </NavItem>
-                <NavItem className="icons">
-                  <NavLink href="/MainProfilePage"><FaUser size="1.2em" /></NavLink>
-                </NavItem>
-                <NavItem className="icons">
-                  <NavLink href="/SearchPage">< FaSearch size="1.2em"/></NavLink>
-                </NavItem>
-                <NavItem className="icons">
-                  <NavLink href="https://github.com/44cjohnson/CS35lFinalProj"><FaGithub size="1.2em"/></NavLink>
-                </NavItem>
+                {isAuthenticated ? authLinks : guestLinks}
               </Nav>
             </Collapse>
           </Container>
@@ -86,4 +110,8 @@ class AppNavbar extends Component {
   }
 }
 
-export default AppNavbar;
+const mapStateToProps = (state) => ({
+  auth: state.auth,
+});
+
+export default connect(mapStateToProps, null)(AppNavbar);

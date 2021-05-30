@@ -77,7 +77,7 @@ class PhotoModal extends Component {
                 ></Input>
                 <Input type="file" name="img" id="photo" formEncType="multipart/form-data" />
                 <FormText color="muted">
-                  Select a photo from your local system
+                  Select a photo
                 </FormText>
                 <Button color="dark" style={{ marginTop: "2rem" }} block>
                   Add Photo

@@ -1,5 +1,6 @@
 const express = require("express");
 const router = express.Router();
+const auth = require("../../middleware/auth");
 
 // Item Model (bring in item model)
 const Item = require("../../models/Item");
@@ -18,10 +19,10 @@ router.get("/", (req, res) => {
 
 // @route POST request to api/items
 // @desc Create An Item
-// @access Public
+// @access Private
 
 //the slash represents endpoint of api/items, already in correct file
-router.post("/", (req, res) => {
+router.post("/", auth, (req, res) => {
   //want to construct an item to insert into the database
   //pass in an object to new Item, name will come from request
   const newItem = new Item({
@@ -36,10 +37,10 @@ router.post("/", (req, res) => {
 
 // @route DELETE request to api/items/:id
 // @desc Delete An Item
-// @access Public
+// @access Private
 
 //the /:id represents a placeholder for whatever we pass in as an id
-router.delete("/:id", (req, res) => {
+router.delete("/:id", auth, (req, res) => {
   //first find the item you want to delete
   Item.findById(req.params.id) //will fetch id from url
     .then((item) =>

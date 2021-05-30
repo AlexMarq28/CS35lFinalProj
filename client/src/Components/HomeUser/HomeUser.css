@@ -1,7 +1,3 @@
-/* Ernest (1:30PM 5/29/2021)
-Description:
-LoginUser.css is identical to NewUser.css.
-*/
 
 .login-form {
     width: 100%;
@@ -31,7 +27,7 @@ LoginUser.css is identical to NewUser.css.
 
 .button {    
     width: 100%;
-    max-width: 30px;
+    max-width: 330px;
     height: 100%;
 }
 
