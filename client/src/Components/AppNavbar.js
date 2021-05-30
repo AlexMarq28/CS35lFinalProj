@@ -1,4 +1,19 @@
+/* ----------------------------------------------------------------------------------------------------*/
+/* Ernest (5:00PM 5/29/2021)
+Description:
+Installed react-icons, then imported some of them for use in AppNavBar.js.
+For each Navlink, I've replaced the text with the icons so as to clean up the Navbar a bit.
+
+IMPORTANT:
+Please install react-icons as such before attempting to run, otherwise you'll run into compile errors:
+Ernests-MBP:client ernestkim$ npm install react-icons
+*/
+import { FaUser, FaHome, FaGithub, FaSearch } from "react-icons/fa";
+import './AppNavbar.css';
+/* ----------------------------------------------------------------------------------------------------*/
+
 import React, { Component } from "react";
+
 import {
   Collapse,
   Navbar,
@@ -39,8 +54,8 @@ class AppNavbar extends Component {
             <NavbarToggler onClick={this.toggle} />
             <Collapse isOpen={this.state.isOpen} navbar>
               <Nav className="ms-auto" navbar>
-                <NavItem>
-                  <NavLink href="/">Home Page</NavLink>
+                <NavItem className="icons">
+                  <NavLink href="/"><FaHome size="1.2em"/></NavLink>
                 </NavItem>
                 <NavItem>
                   <NavLink href="/RegisterPage">Create a New Profile</NavLink>
@@ -48,14 +63,14 @@ class AppNavbar extends Component {
 		            <NavItem>
                   <NavLink href="/LoginPage">Log in to Profile</NavLink>
                 </NavItem>
-                <NavItem>
-                  <NavLink href="/MainProfilePage">Main Profile Page</NavLink>
+                <NavItem className="icons">
+                  <NavLink href="/MainProfilePage"><FaUser size="1.2em" /></NavLink>
                 </NavItem>
-                <NavItem>
-                  <NavLink href="/SearchPage">Search Profiles</NavLink>
+                <NavItem className="icons">
+                  <NavLink href="/SearchPage">< FaSearch size="1.2em"/></NavLink>
                 </NavItem>
-                <NavItem>
-                  <NavLink href="https://github.com/44cjohnson/CS35lFinalProj">Github</NavLink>
+                <NavItem className="icons">
+                  <NavLink href="https://github.com/44cjohnson/CS35lFinalProj"><FaGithub size="1.2em"/></NavLink>
                 </NavItem>
               </Nav>
             </Collapse>

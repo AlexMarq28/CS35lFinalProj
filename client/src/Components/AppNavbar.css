@@ -1,0 +1,20 @@
+/* ----------------------------------------------------------------------------------------------------*/
+/* Ernest (5:02PM 5/29/2021)
+Description:
+I've added this CSS file to help format the Nav-link icons.
+".icons" is used for the links in the Navbar, while ".reference" is just there for reference.
+*/
+/* ----------------------------------------------------------------------------------------------------*/
+
+.icons {
+    padding-left: 5px;
+    padding-right: 5px;
+}
+
+.reference {
+    width: 100%;
+    max-width: 330px;
+    padding: 15px;
+    margin: auto;
+    height: 100%;
+}
