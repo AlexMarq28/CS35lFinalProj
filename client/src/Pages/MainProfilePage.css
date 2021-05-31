@@ -1,0 +1,40 @@
+/* ----------------------------------------------------------------------------------------------------*/
+/*Denver (9:16PM 5/30/2021)
+Update:
+Just reused Ernests excellent design and changed the photo to one of the others he had uploaded which seemed like what he intended
+*/
+/* ----------------------------------------------------------------------------------------------------*/
+
+.MainProfilePage {
+    text-align: center;
+    /*background-image: url("https://cdn2.lamag.com/wp-content/uploads/sites/6/2020/03/los-angeles-gym-closed-danielle-cerullo-CQfNt66ttZM-unsplash-1068x712.jpg");*/
+    background-image: url("../img/background2.jpg");
+
+    position: fixed;
+    min-width: 100%;
+    min-height: 100%;
+    background-size: cover;
+    background-position: center;
+}
+
+.MainProfilePageBackground {
+    background-image: url("../img/background.jpg") no-repeat; 
+    background-size: cover;
+    min-width: 100%;
+    min-height: 100%;
+  }
+
+  .font-link {
+    font-family: 'Amiri', serif;
+}
+
+.MainProfilePageMessage {
+    opacity: 1;
+    transition: 7s opacity;
+    color: #030303;
+    /*margin-bottom: 25px;*/
+}
+
+.fade-in {
+    opacity: 1;
+}

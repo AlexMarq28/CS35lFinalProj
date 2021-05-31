@@ -63,7 +63,7 @@ class AppNavbar extends Component {
           </span>
         </NavItem>
         <NavItem>
-          <NavLink href="/">Home Page</NavLink>
+          <NavLink href="/MainProfilePage">Home Page</NavLink>
         </NavItem>
         <NavItem className="icons">
           <NavLink href="/SearchPage">
