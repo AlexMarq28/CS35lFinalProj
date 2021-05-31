@@ -4,6 +4,7 @@ import { CSSTransition, TransitionGroup } from "react-transition-group";
 import { connect } from "react-redux";
 import { getItems, deleteItem } from "../actions/itemActions";
 import PropTypes from "prop-types";
+import { grabEmail } from "../storeAccess/grabEmail";
 
 import "./ExerciseList.css";
 
@@ -13,6 +14,11 @@ import "./ExerciseList.css";
 // We will also delete the item from the database separately
 
 class ExerciseList extends Component {
+  static propTypes = {
+    isAuthenticated: PropTypes.bool,
+    user: PropTypes.object.isRequired,
+  };
+
   //trigger rerendering
   componentDidMount() {
     this.props.getItems();
@@ -23,12 +29,36 @@ class ExerciseList extends Component {
   };
 
   render() {
-    const { items } = this.props.item; //destructuring, pulling items from this.state(items)
+    console.log("Email sent as: " + grabEmail());
+    let arrItems = [];
+    //console.log(arrItems);
+    //arrItems = this.props.item;
+    // console.log("The array of items: ");
+    // console.log(arrItems);
+
+    if (grabEmail()) {
+      arrItems = this.props.item.items.filter(
+        (item) => item.email === grabEmail()
+      );
+      //console.log("The array of items modified: ");
+      //console.log(arrItems);
+    } else {
+      return (
+        <Container>
+          <ListGroup>
+            <ListGroupItem>Login or register to add items</ListGroupItem>
+          </ListGroup>
+        </Container>
+      );
+    }
+
+    //const { items } = this.props.item;
+
     return (
       <Container>
         <ListGroup>
           <TransitionGroup className="exercise-list">
-            {items.map(({ _id, name }) => (
+            {arrItems.map(({ _id, name }) => (
               <CSSTransition key={_id} timeout={500} classNames="fade">
                 <ListGroupItem>
                   <Button
@@ -58,8 +88,13 @@ ExerciseList.propTypes = {
 
 const mapStateToProps = (state) => ({
   item: state.item,
+  user: state.auth.user,
+  isAuthenticated: state.auth.isAuthenticated,
 });
 //state.item because of what we called it in index.js
 
-export default connect(mapStateToProps, { getItems, deleteItem })(ExerciseList);
+export default connect(mapStateToProps, {
+  getItems,
+  deleteItem,
+})(ExerciseList);
 //mapStateToProps allows us to map item state to component property to use in ExerciseList
