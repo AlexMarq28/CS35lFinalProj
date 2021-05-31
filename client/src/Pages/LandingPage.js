@@ -7,7 +7,7 @@ I've also added <div> tags - containing classNames defined within 'LandingPage.c
 Everything to do with the background image can be done in 'LandingPage.css'.
 
 */
-import './LandingPage.css';
+import "./LandingPage.css";
 /* ----------------------------------------------------------------------------------------------------*/
 
 import React from "react";
@@ -26,25 +26,24 @@ import { Container } from "reactstrap";
 import HomeUser from "../Components/HomeUser/HomeUser.js";
 
 export default function LandingPage() {
-    return (<Provider store={store}>
-        <div className="LandingPage" >
+  return (
+    <Provider store={store}>
+      <div className="LandingPage">
         <div className="App">
           <AppNavbar />
           <div className="font-link">
-            <h1 className="landingPageMessage" style={{fontSize: 72}}>Welcome</h1>
+            <h1 className="landingPageMessage" style={{ fontSize: 72 }}>
+              Welcome
+            </h1>
           </div>
-          <Container>
-            <HomeUser />
-          </Container>
         </div>
-        </div>
-      </Provider>);
+      </div>
+    </Provider>
+  );
 
+  /*<PhotoFrame />*/
 
-/*<PhotoFrame />*/
-
-
-        /*<div>
+  /*<div>
         <h1>Welcome to our Exercise Application</h1>
         <Link to="/LoginPage">Login to your profile</Link><br />
         <Link to="/RegisterPage">Create a new profile</Link><br />

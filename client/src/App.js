@@ -44,6 +44,8 @@ function App() {
   );
 }
 
+export default App;
+
 //FUTURE PAGES
 /*
           <Route exact path="/SearchPage">
@@ -72,4 +74,3 @@ class App extends Component {
   }
 }
 */
-export default App;

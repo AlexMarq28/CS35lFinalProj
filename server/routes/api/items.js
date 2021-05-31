@@ -27,6 +27,7 @@ router.post("/", auth, (req, res) => {
   //pass in an object to new Item, name will come from request
   const newItem = new Item({
     name: req.body.name,
+    email: req.body.email,
   });
   //date is automatically inserted
 
