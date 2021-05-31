@@ -11,9 +11,38 @@ const ItemSchema = new Schema({
     type: Date,
     default: Date.now,
   },
-  email: {
+  
+   email: {
     type: String,
+     required: true,
   },
-});
+  
+   author: {
+    type: String,
+    required: true,
+   description: {
+    type: String,
+    required: true,
+  },
+   likes: {
+       type: Integer,
+       default: 0,
+   },
+   numSessions: {
+       type: Integer,
+       default: 0,
+   },
+     picture: {
+       type: photo,
+       required: true,
+     },
+     tags: [{
+	 type: String
+     }],
+  
+     
+   });
+   
+
 
 module.exports = Item = mongoose.model("item", ItemSchema);
