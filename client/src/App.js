@@ -16,6 +16,7 @@ Link: https://www.youtube.com/watch?v=yQf1KbGiwiI
 import { BrowserRouter as Router, Switch, Route } from "react-router-dom";
 import LandingPage from "./Pages/LandingPage";
 import MainProfilePage from "./Pages/MainProfilePage";
+import SearchPage from "./Pages/SearchPage";
 
 //import { Provider } from "react-redux"; //package that binds together react & redux
 import store from "./store";
@@ -37,6 +38,9 @@ function App() {
           </Route>
           <Route exact path="/MainProfilePage">
             <MainProfilePage />
+          </Route>
+          <Route exact path="/SearchPage">
+            <SearchPage />
           </Route>
         </Switch>
       </Router>

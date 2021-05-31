@@ -1,26 +1,28 @@
 import React from "react";
+//import { Link } from "react-router-dom";
 import { Provider } from "react-redux"; //package that binds together react & redux
 import store from "../store";
 import AppNavbar from "../Components/AppNavbar";
-import Exerciselist from "../Components/ExerciseList";
-import ItemModal from "../Components/ItemModal";
 import { Container, Row } from "reactstrap";
-import './MainProfilePage.css';
+import './SearchPage.css';
 import SearchBar from "../Components/SearchBar";
+//import "./App.css";
 
-export default function MainProfilePage() {
+export default function SearchPage() {
     return (<Provider store={store}>
-        <div className="MainProfilePage" >
+        <div className="SearchPage" >
         <div className="App">  
 	<AppNavbar />
 	<div className="font-link">
-            <h1 className="MainProfilePageMessage" style={{fontSize: 72}}>The Exercise Stack</h1>
+            <h1 className="SearchPageMessage" style={{fontSize: 72}}>Search the Exercise Stack</h1>
           </div>
           <Container>
-              <ItemModal />
-              <Exerciselist />
+              <SearchBar />
           </Container>
         </div>
         </div>
       </Provider>);
 }
+
+
+
