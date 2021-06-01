@@ -28,7 +28,7 @@ export default function StopwatchPage() {
           <Container>
             <Stopwatch />
           </Container>
-          <div>
+          <div className="otherButtons">
             <ItemModal />
             <ExerciseList />
           </div>

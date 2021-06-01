@@ -1,3 +1,5 @@
+import "./ProfilePage.css";
+
 import React from "react";
 import { Provider } from "react-redux"; //package that binds together react & redux
 import store from "../store";
