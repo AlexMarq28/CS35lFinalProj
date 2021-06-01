@@ -5,20 +5,21 @@ import AppNavbar from "../Components/AppNavbar";
 import Exerciselist from "../Components/ExerciseList";
 import ItemModal from "../Components/ItemModal";
 import { Container, Row } from "reactstrap";
-import './MainProfilePage.css';
+import './StopwatchPage.css';
 import SearchBar from "../Components/SearchBar";
 
-export default function MainProfilePage() {
+import Stopwatch from "../Components/Stopwatch.js";
+
+export default function StopwatchPage() {
     return (<Provider store={store}>
-        <div className="MainProfilePage" >
+        <div className="StopwatchPage" >
         <div className="App">  
 	<AppNavbar />
-	<div className="font-link">
-            <h1 className="MainProfilePageMessage" style={{color: "#fffff0", fontSize: 72}}>FEED WHERE CARDS WILL GO</h1>
+	<div className="font-link3">
+            <h1 className="StopwatchPageMessage" style={{color: "black", fontSize: 72}}>STOPWATCH OF DEATH</h1>
           </div>
           <Container>
-              <ItemModal />
-              <Exerciselist />
+            <Stopwatch/>
           </Container>
         </div>
         </div>

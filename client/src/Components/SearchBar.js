@@ -1,3 +1,5 @@
+import "./SearchBar.css";
+
 import React, { Component } from "react";
 import { Container, ListGroup, ListGroupItem, Input, Button } from "reactstrap";
 import { CSSTransition, TransitionGroup } from "react-transition-group";
@@ -31,10 +33,10 @@ class SearchBar extends Component {
     const self = this;
     return (
       <Container>
-        <Input
+        <Input className="font-link3"
           type="text"
           name="search"
-          placeholder="Search for exercise item"
+          placeholder="SEARCH FOR AN EXERCISE ITEM"
           onChange={this.onChange}
             ></Input>
         <ListGroup>

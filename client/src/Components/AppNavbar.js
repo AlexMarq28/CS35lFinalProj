@@ -1,3 +1,4 @@
+import { BsStopwatch } from "react-icons/bs";
 import NavbarDrop from "./auth/NavbarDrop.js";
 /* ----------------------------------------------------------------------------------------------------*/
 /* Ernest (5:00PM 5/29/2021)
@@ -91,6 +92,11 @@ class AppNavbar extends Component {
         <NavItem className="icons">
           <NavLink href="https://github.com/44cjohnson/CS35lFinalProj">
             <FaGithub size="1.2em" />
+          </NavLink>
+        </NavItem>
+        <NavItem>
+          <NavLink href="/StopwatchPage">
+            <BsStopwatch size="1.2em" />
           </NavLink>
         </NavItem>
         <NavItem >
