@@ -1,3 +1,5 @@
+import StopwatchPage from "./Pages/StopwatchPage.js";
+
 import React, { useEffect } from "react";
 //import AppNavbar from "./Components/AppNavbar";
 //import Exerciselist from "./Components/ExerciseList";
@@ -41,6 +43,9 @@ function App() {
           </Route>
           <Route exact path="/SearchPage">
             <SearchPage />
+          </Route>
+          <Route exact path="/StopwatchPage">
+            <StopwatchPage />
           </Route>
         </Switch>
       </Router>

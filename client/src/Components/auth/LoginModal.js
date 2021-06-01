@@ -1,3 +1,5 @@
+import { GrClose } from "react-icons/gr";
+
 import "./LoginModal.css";
 import React, { Component } from "react";
 import {
@@ -5,6 +7,7 @@ import {
   Modal,
   ModalHeader,
   ModalBody,
+  ModalFooter,
   Form,
   FormGroup,
   Label,
@@ -85,7 +88,7 @@ class LoginModal extends Component {
         </NavLink>
 
         <Modal isOpen={this.state.modal} toggle={this.toggle}>
-          <ModalHeader className="font-link3" toggle={this.toggle}>LOGIN</ModalHeader>
+          <ModalHeader className="font-link3" toggle={this.toggle} >LOGIN</ModalHeader>
           <ModalBody className="font-link3">
             {this.state.msg ? (
               <Alert color="danger">{this.state.msg}</Alert>
@@ -114,6 +117,7 @@ class LoginModal extends Component {
                 <Button color="dark" style={{ marginTop: "2rem" }} block>
                   LOGIN
                 </Button>
+
               </FormGroup>
             </Form>
           </ModalBody>

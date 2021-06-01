@@ -28,6 +28,10 @@ This is also based on Ernests excellent design and changed the photo to one of t
     font-family: 'Amiri', serif;
 }
 
+.font-link3 {
+    font-family: 'Ramabhadra', sans-serif;
+}
+
 .SearchPageMessage {
     opacity: 1;
     transition: 7s opacity;
