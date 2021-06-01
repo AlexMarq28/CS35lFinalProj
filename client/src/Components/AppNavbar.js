@@ -1,5 +1,5 @@
 import { BsStopwatch } from "react-icons/bs";
-import NavbarDrop from "./auth/NavbarDrop.js";
+import NavbarDrop from "./NavbarDrop.js";
 /* ----------------------------------------------------------------------------------------------------*/
 /* Ernest (5:00PM 5/29/2021)
 Description:
@@ -76,20 +76,17 @@ class AppNavbar extends Component {
 
     const authLinks = (
       <Fragment>
-        <NavItem className="homePage">
+        <NavItem className="icons">
           <NavLink href="/MainProfilePage">
             <FaHome size="1.5em" />
           </NavLink>
         </NavItem>
-        <NavItem className="cardPage">
-          <NavLink href="/CardPage">Card</NavLink>
-        </NavItem>
-        <NavItem className="userPage">
-          <NavLink href="#">
-            <FaEdit size="1.5em" />
+        <NavItem className="icons">
+          <NavLink href="/StopwatchPage">
+            <BsStopwatch size="1.5em" />
           </NavLink>
         </NavItem>
-        <NavItem className="searchPage">
+        <NavItem className="icons">
           <NavLink href="/SearchPage">
             <FaSearch size="1.5em" />
           </NavLink>
@@ -107,10 +104,8 @@ class AppNavbar extends Component {
             <FaGithub size="1.2em" />
           </NavLink>
         </NavItem>
-        <NavItem>
-          <NavLink href="/StopwatchPage">
-            <BsStopwatch size="1.2em" />
-          </NavLink>
+        <NavItem className="icons">
+          <NavLink>KEY:</NavLink>
         </NavItem>
         <NavItem>
           <NavbarDrop />
