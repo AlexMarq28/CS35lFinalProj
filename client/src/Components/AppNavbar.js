@@ -10,7 +10,15 @@ IMPORTANT:
 Please install react-icons as such before attempting to run, otherwise you'll run into compile errors:
 Ernests-MBP:client ernestkim$ npm install react-icons
 */
-import { FaShoePrints, FaCaretSquareDown, FaEdit, FaUser, FaHome, FaGithub, FaSearch } from "react-icons/fa";
+import {
+  FaShoePrints,
+  FaCaretSquareDown,
+  FaEdit,
+  FaUser,
+  FaHome,
+  FaGithub,
+  FaSearch,
+} from "react-icons/fa";
 import "./AppNavbar.css";
 /* ----------------------------------------------------------------------------------------------------*/
 import React, { Component, Fragment } from "react";
@@ -71,6 +79,9 @@ class AppNavbar extends Component {
             <FaHome size="1.5em" />
           </NavLink>
         </NavItem>
+        <NavItem className="cardPage">
+          <NavLink href="/CardPage">Card</NavLink>
+        </NavItem>
         <NavItem className="userPage">
           <NavLink href="#">
             <FaEdit size="1.5em" />
@@ -99,31 +110,55 @@ class AppNavbar extends Component {
             <BsStopwatch size="1.2em" />
           </NavLink>
         </NavItem>
-        <NavItem >
-          <NavbarDrop/>
+        <NavItem>
+          <NavbarDrop />
         </NavItem>
       </Fragment>
     );
 
     const guestLinks = (
       <Fragment>
-        <NavItem className="font-link3" style={{/*fontWeight: "bold"*/}}>
-          <RegisterModal/>
+        <NavItem
+          className="font-link3"
+          style={
+            {
+              /*fontWeight: "bold"*/
+            }
+          }
+        >
+          <RegisterModal />
         </NavItem>
-        <NavItem className="font-link3" style={{/*fontWeight: "bold"*/}}>
-          <LoginModal/>
+        <NavItem
+          className="font-link3"
+          style={
+            {
+              /*fontWeight: "bold"*/
+            }
+          }
+        >
+          <LoginModal />
         </NavItem>
       </Fragment>
     );
 
     return (
       <div>
-        <Navbar style={{ backgroundColor: '#000000' }} dark expand="sm" className="mb-5">
+        <Navbar
+          style={{ backgroundColor: "#000000" }}
+          dark
+          expand="sm"
+          className="mb-5"
+        >
           <Container>
-          <div className="navbarBrand" >
-            <NavbarBrand className="font-link" href="/" style={{ color: "#fffff0", fontSize: 36}}>
-              <FaShoePrints className="logo" size="1em"/>milestone
-            </NavbarBrand>
+            <div className="navbarBrand">
+              <NavbarBrand
+                className="font-link"
+                href="/"
+                style={{ color: "#fffff0", fontSize: 36 }}
+              >
+                <FaShoePrints className="logo" size="1em" />
+                milestone
+              </NavbarBrand>
             </div>
             <NavbarToggler onClick={this.toggle} />
             <Collapse isOpen={this.state.isOpen} navbar>
