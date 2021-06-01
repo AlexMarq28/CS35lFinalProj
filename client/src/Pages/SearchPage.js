@@ -14,7 +14,7 @@ export default function SearchPage() {
         <div className="App">  
 	<AppNavbar />
 	<div className="font-link">
-            <h1 className="SearchPageMessage" style={{fontSize: 72}}>Search the Exercise Stack</h1>
+            <h1 className="SearchPageMessage" style={{color: "black", fontSize: 72}}>Search the Exercise Stack</h1>
           </div>
           <Container>
               <SearchBar />

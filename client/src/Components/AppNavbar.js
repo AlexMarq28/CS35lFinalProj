@@ -1,3 +1,4 @@
+import NavbarDrop from "./auth/NavbarDrop.js";
 /* ----------------------------------------------------------------------------------------------------*/
 /* Ernest (5:00PM 5/29/2021)
 Description:
@@ -8,7 +9,7 @@ IMPORTANT:
 Please install react-icons as such before attempting to run, otherwise you'll run into compile errors:
 Ernests-MBP:client ernestkim$ npm install react-icons
 */
-import { FaUser, FaHome, FaGithub, FaSearch } from "react-icons/fa";
+import { FaShoePrints, FaCaretSquareDown, FaEdit, FaUser, FaHome, FaGithub, FaSearch } from "react-icons/fa";
 import "./AppNavbar.css";
 /* ----------------------------------------------------------------------------------------------------*/
 import React, { Component, Fragment } from "react";
@@ -58,19 +59,33 @@ class AppNavbar extends Component {
     const authLinks = (
       <Fragment>
         <NavItem>
-          <span className="navbar-text mr-4">
-            <strong>{user ? `Welcome ${user.name}` : ""}</strong>
-          </span>
+          <div className="welcome">
+            <span className="navbar-text mr-4">
+              <strong>{user ? `Welcome, ${user.name}` : ""}</strong>
+            </span>
+          </div>
         </NavItem>
-        <NavItem>
-          <NavLink href="/MainProfilePage">Home Page</NavLink>
-        </NavItem>
-        <NavItem className="icons">
-          <NavLink href="/SearchPage">
-            <FaSearch size="1.2em" />
+        <NavItem className="homePage">
+          <NavLink href="/MainProfilePage">
+            <FaHome size="1.5em" />
           </NavLink>
         </NavItem>
-        <NavItem>
+        <NavItem className="userPage">
+          <NavLink href="#">
+            <FaEdit size="1.5em" />
+          </NavLink>
+        </NavItem>
+        <NavItem className="searchPage">
+          <NavLink href="/SearchPage">
+            <FaSearch size="1.5em" />
+          </NavLink>
+        </NavItem>
+        <NavItem className="icons">
+          <NavLink href="#">
+            <FaUser size="1.2em" />
+          </NavLink>
+        </NavItem>
+        <NavItem className="icons">
           <Logout />
         </NavItem>
         <NavItem className="icons">
@@ -78,25 +93,32 @@ class AppNavbar extends Component {
             <FaGithub size="1.2em" />
           </NavLink>
         </NavItem>
+        <NavItem >
+          <NavbarDrop/>
+        </NavItem>
       </Fragment>
     );
 
     const guestLinks = (
       <Fragment>
-        <NavItem>
-          <RegisterModal></RegisterModal>
+        <NavItem className="font-link3" style={{/*fontWeight: "bold"*/}}>
+          <RegisterModal/>
         </NavItem>
-        <NavItem>
-          <LoginModal></LoginModal>
+        <NavItem className="font-link3" style={{/*fontWeight: "bold"*/}}>
+          <LoginModal/>
         </NavItem>
       </Fragment>
     );
 
     return (
       <div>
-        <Navbar color="dark" dark expand="sm" className="mb-5">
+        <Navbar style={{ backgroundColor: '#000000' }} dark expand="sm" className="mb-5">
           <Container>
-            <NavbarBrand href="/">Exercise Routine</NavbarBrand>
+          <div className="navbarBrand" >
+            <NavbarBrand className="font-link" href="/" style={{ color: "#fffff0", fontSize: 36}}>
+              <FaShoePrints className="logo" size="1em"/>milestone
+            </NavbarBrand>
+            </div>
             <NavbarToggler onClick={this.toggle} />
             <Collapse isOpen={this.state.isOpen} navbar>
               <Nav className="ms-auto" navbar>
