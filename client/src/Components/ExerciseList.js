@@ -29,7 +29,7 @@ class ExerciseList extends Component {
   };
 
   render() {
-    console.log("Email sent as: " + grabEmail());
+    //console.log("Email sent as: " + grabEmail());
     let arrItems = [];
     //console.log(arrItems);
     //arrItems = this.props.item;

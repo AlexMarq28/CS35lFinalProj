@@ -144,7 +144,7 @@ class AppNavbar extends Component {
     return (
       <div>
         <Navbar
-          style={{ backgroundColor: "#000000" }}
+          style={{ backgroundColor: "darkslategray" }}
           dark
           expand="sm"
           className="mb-5"

@@ -34,7 +34,7 @@ export const addCard = (card) => (dispatch, getState) => {
     );
 };
 
-export const deleteItem = (id) => (dispatch, getState) => {
+export const deleteCard = (id) => (dispatch, getState) => {
   axios
     .delete(`/api/cards/${id}`, tokenConfig(getState))
     .then((Res) =>

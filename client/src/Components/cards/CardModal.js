@@ -10,7 +10,7 @@ import {
   Input,
 } from "reactstrap";
 import { connect } from "react-redux";
-import { addCard } from "../actions/cardActions";
+import { addCard } from "../../actions/cardActions";
 import PropTypes from "prop-types";
 
 class CardModal extends Component {
@@ -18,7 +18,6 @@ class CardModal extends Component {
     modal: false,
     image: "",
     title: "",
-    subtitle: "",
     descript: "",
   };
 
@@ -43,7 +42,7 @@ class CardModal extends Component {
     const newCard = {
       image: this.state.image,
       title: this.state.title,
-      subtitle: this.state.subtitle,
+      subtitle: this.props.user.name,
       email: this.props.user.email,
       descript: this.state.descript,
     };
@@ -86,15 +85,6 @@ class CardModal extends Component {
                   name="title"
                   id="title"
                   placeholder="Add title to workout"
-                  onChange={this.onChange}
-                ></Input>
-
-                <Label for="subtitle">Subtitle</Label>
-                <Input
-                  type="text"
-                  name="subtitle"
-                  id="subtitle"
-                  placeholder="Add subtitle to workout"
                   onChange={this.onChange}
                 ></Input>
 

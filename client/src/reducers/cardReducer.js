@@ -15,18 +15,18 @@ export default function reduce(state = initialState, action) {
     case GET_CARDS:
       return {
         ...state,
-        items: action.payload,
+        cards: action.payload,
         loading: false,
       };
     case DELETE_CARD:
       return {
         ...state,
-        items: state.items.filter((item) => item._id !== action.payload),
+        cards: state.cards.filter((card) => card._id !== action.payload),
       };
     case ADD_CARD:
       return {
         ...state,
-        items: [action.payload, ...state.items],
+        cards: [action.payload, ...state.cards],
       };
     case CARDS_LOADING:
       return {

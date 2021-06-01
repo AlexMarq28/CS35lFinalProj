@@ -1,4 +1,3 @@
-
 /* ----------------------------------------------------------------------------------------------------*/
 /* Ernest (3:42PM, 5/29/2021)
 Update: 
@@ -33,29 +32,20 @@ export default function LandingPage() {
         <div className="App">
           <AppNavbar />
           <div className="font-link3">
-            <h1 className="landingPageMessage" style={{ color:"#fffff0", fontSize: 108 }}>
+            <h1
+              className="landingPageMessage"
+              style={{ color: "#fffff0", fontSize: 108 }}
+            >
               WELCOME
             </h1>
           </div>
           <div className="team">
-            <h2 className="font-link3">
-              CS35L SPRING 2021 PROJECT
-            </h2>
-              <h4 className="font-link3">
-                  OLUCHI NZEREM
-              </h4>
-              <h4 className="font-link3">
-                  ALEJANDRO MARQUEZ
-              </h4>
-              <h4 className="font-link3">
-                  COLIN JOHNSON
-              </h4>
-              <h4 className="font-link3">
-                  DENVER LEE BROWN
-              </h4>
-              <h4 className="font-link3">
-                  ERNEST KIM
-              </h4>
+            <h2 className="font-link3">CS35L SPRING 2021 PROJECT</h2>
+            <h4 className="font-link3">OLUCHI NZEREM</h4>
+            <h4 className="font-link3">ALEJANDRO MARQUEZ</h4>
+            <h4 className="font-link3">COLIN JOHNSON</h4>
+            <h4 className="font-link3">DENVER LEE BROWN</h4>
+            <h4 className="font-link3">ERNEST KIM</h4>
           </div>
         </div>
       </div>
