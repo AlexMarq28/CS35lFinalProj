@@ -2,7 +2,7 @@ import React, { Component } from "react";
 import { Container, Row, Col, ListGroup, ListGroupItem } from "reactstrap";
 import { CSSTransition, TransitionGroup } from "react-transition-group";
 import { connect } from "react-redux";
-import { getCards, deleteCard } from "../../actions/cardActions";
+import { getCards } from "../../actions/cardActions";
 import PropTypes from "prop-types";
 import { grabEmail } from "../../storeAccess/grabEmail";
 import WorkoutCard from "./WorkoutCard";
@@ -80,5 +80,4 @@ const mapStateToProps = (state) => ({
 
 export default connect(mapStateToProps, {
   getCards,
-  deleteCard,
 })(CardList);

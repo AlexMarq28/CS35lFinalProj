@@ -65,15 +65,17 @@ class AppNavbar extends Component {
   render() {
     const { isAuthenticated, user } = this.props.auth;
 
+    //taking these out because trying to make navbar clean - colin
+    // <NavItem>
+    //   <div className="welcome">
+    //     <span className="navbar-text mr-4">
+    //       <strong>{user ? `Welcome, ${user.name}` : ""}</strong>
+    //     </span>
+    //   </div>
+    // </NavItem>
+
     const authLinks = (
       <Fragment>
-        <NavItem>
-          <div className="welcome">
-            <span className="navbar-text mr-4">
-              <strong>{user ? `Welcome, ${user.name}` : ""}</strong>
-            </span>
-          </div>
-        </NavItem>
         <NavItem className="homePage">
           <NavLink href="/MainProfilePage">
             <FaHome size="1.5em" />
@@ -144,7 +146,7 @@ class AppNavbar extends Component {
     return (
       <div>
         <Navbar
-          style={{ backgroundColor: "darkslategray" }}
+          style={{ backgroundColor: "black" }}
           dark
           expand="sm"
           className="mb-5"
