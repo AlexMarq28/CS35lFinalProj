@@ -14,7 +14,7 @@ export default function MainProfilePage() {
         <div className="App">  
 	<AppNavbar />
 	<div className="font-link">
-            <h1 className="MainProfilePageMessage" style={{fontSize: 72}}>The Exercise Stack</h1>
+            <h1 className="MainProfilePageMessage" style={{color: "#fffff0", fontSize: 72}}>FEED WHERE CARDS WILL GO</h1>
           </div>
           <Container>
               <ItemModal />
