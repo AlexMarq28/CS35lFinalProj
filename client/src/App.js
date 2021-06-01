@@ -19,6 +19,7 @@ import { BrowserRouter as Router, Switch, Route } from "react-router-dom";
 import LandingPage from "./Pages/LandingPage";
 import MainProfilePage from "./Pages/MainProfilePage";
 import SearchPage from "./Pages/SearchPage";
+import ProfilePage from "./Pages/ProfilePage";
 
 //import { Provider } from "react-redux"; //package that binds together react & redux
 import store from "./store";
@@ -41,11 +42,14 @@ function App() {
           <Route exact path="/MainProfilePage">
             <MainProfilePage />
           </Route>
+          <Route exact path="/StopwatchPage">
+            <StopwatchPage />
+          </Route>
           <Route exact path="/SearchPage">
             <SearchPage />
           </Route>
-          <Route exact path="/StopwatchPage">
-            <StopwatchPage />
+          <Route exact path="/ProfilePage">
+            <ProfilePage />
           </Route>
         </Switch>
       </Router>

@@ -92,7 +92,7 @@ class AppNavbar extends Component {
           </NavLink>
         </NavItem>
         <NavItem className="icons">
-          <NavLink href="#">
+          <NavLink href="/ProfilePage">
             <FaUser size="1.2em" />
           </NavLink>
         </NavItem>

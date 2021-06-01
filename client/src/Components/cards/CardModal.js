@@ -10,8 +10,8 @@ import {
   Input,
 } from "reactstrap";
 import { connect } from "react-redux";
-import { addCard } from "../../actions/cardActions";
 import PropTypes from "prop-types";
+import { addCard } from "../../actions/cardActions";
 
 class CardModal extends Component {
   state = {
