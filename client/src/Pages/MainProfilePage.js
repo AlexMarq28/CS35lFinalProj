@@ -11,11 +11,18 @@ import SearchBar from "../Components/SearchBar";
 export default function MainProfilePage() {
   return (
     <Provider store={store}>
-      <div className="MainProfilePage">
+      <div className="MainProfilePage" style={{height: "100vh"}}>
       <AppNavbar fixed="top"/>
         <div className="App">
-
           <div className="cardList">
+          <div className="font-link3">
+            <h1
+              className="mainProfilePageMessage"
+              style={{ color: "black", fontSize: 40, paddingBottom: 25 }}
+            >
+              FEED
+            </h1>
+          </div> 
             <Container>
               <CardModal />
               <CardList />

@@ -20,8 +20,9 @@ Just reused Ernests excellent design and changed the photo to one of the others 
     /* overflow: auto; */
     overflow-y: scroll;
     height: auto;
-}
 
+    padding-top: 100px;
+}
 
 
 .MainProfilePageBackground {
@@ -52,6 +53,6 @@ Just reused Ernests excellent design and changed the photo to one of the others 
 }
 
 .cardList {
-    padding-top: 100px;
+    /* padding-top: 100px; */
     padding-bottom: 100px;
 }
