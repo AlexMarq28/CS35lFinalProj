@@ -82,49 +82,49 @@ class RegisterModal extends Component {
   render() {
     return (
       <div>
-        <NavLink onClick={this.toggle} href="#">
-          Register
+        <NavLink style={{/*color: "#fffff0"*/}} onClick={this.toggle} href="#">
+          REGISTER
         </NavLink>
 
         <Modal isOpen={this.state.modal} toggle={this.toggle}>
-          <ModalHeader toggle={this.toggle}>Register</ModalHeader>
-          <ModalBody>
+          <ModalHeader className="font-link3" toggle={this.toggle}>REGISTER</ModalHeader>
+          <ModalBody className="font-link3">
             {this.state.msg ? (
               <Alert color="danger">{this.state.msg}</Alert>
             ) : null}
             <Form onSubmit={this.onSubmit}>
               <FormGroup>
-                <Label for="name">Name</Label>
+                <Label for="name">NAME</Label>
                 <Input
                   type="text"
                   name="name"
                   id="name"
-                  placeholder="Name"
+                  placeholder="NAME"
                   className="mb-3"
                   onChange={this.onChange}
                 ></Input>
 
-                <Label for="email">Email</Label>
+                <Label for="email">EMAIL</Label>
                 <Input
                   type="email"
                   name="email"
                   id="email"
-                  placeholder="Email"
+                  placeholder="EMAIL"
                   className="mb-3"
                   onChange={this.onChange}
                 ></Input>
 
-                <Label for="password">Password</Label>
+                <Label for="password">PASSWORD</Label>
                 <Input
                   type="password"
                   name="password"
                   id="password"
-                  placeholder="Password"
+                  placeholder="PASSWORD"
                   className="mb-3"
                   onChange={this.onChange}
-                ></Input>
-                <Button color="dark" style={{ marginTop: "2rem" }} block>
-                  Register
+                ></Input> 
+                <Button className="registerButton" color="dark" style={{width:"100%", marginTop: "2rem" }} block>
+                  REGISTER
                 </Button>
               </FormGroup>
             </Form>

@@ -13,8 +13,8 @@ I've added this CSS file to help format the Nav-link icons.
 /* ----------------------------------------------------------------------------------------------------*/
 
 .icons {
-    padding-left: 5px;
-    padding-right: 5px;
+    padding-left: 15px;
+    padding-right: 15px;
 }
 
 .reference {
@@ -37,12 +37,52 @@ I've added this CSS file to help format the Nav-link icons.
     font-family: 'Racing Sans One', cursive;
 }
 
+.font-link3 {
+    font-family: 'Ramabhadra', sans-serif;
+}
+
 .navbarBrand {
     margin-top: -5px;
-    margin-bottom: -5px;
+    margin-bottom: -7px;
 }
 
 .logo {
     margin-right: 20px;
     margin-top: -5px;
 }
+
+.nav-menu{
+    /*padding-left: 15px;
+    padding-right: 15px;*/
+    /*width: 100%;*/
+    justify-content: center;
+}
+
+.homePage a{
+    float: none;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-125px, -50%);
+  }
+
+  .userPage a{
+    float: none;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+  }
+
+  .searchPage a{
+    float: none;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(90px, -50%);
+  }
+
+  .welcome{
+      margin-top: 9px;
+  }
+

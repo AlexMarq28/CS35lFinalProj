@@ -30,6 +30,10 @@ Will continue to work on it.
     font-family: 'Amiri', serif;
 }
 
+.font-link3 {
+    font-family: 'Ramabhadra', sans-serif;
+}
+
 .landingPageMessage {
     opacity: 1;
     transition: 7s opacity;
@@ -39,4 +43,9 @@ Will continue to work on it.
 
 .fade-in {
     opacity: 1;
+}
+
+.team {
+    position: relative;
+    top: 200px;
 }

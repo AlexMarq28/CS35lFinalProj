@@ -1,9 +1,13 @@
+import { GrClose } from "react-icons/gr";
+
+import "./LoginModal.css";
 import React, { Component } from "react";
 import {
   Button,
   Modal,
   ModalHeader,
   ModalBody,
+  ModalFooter,
   Form,
   FormGroup,
   Label,
@@ -79,40 +83,41 @@ class LoginModal extends Component {
   render() {
     return (
       <div>
-        <NavLink onClick={this.toggle} href="#">
-          Login
+        <NavLink className="font-link3" style={{/*color: "#fffff0"*/}} onClick={this.toggle} href="#">
+          LOGIN
         </NavLink>
 
         <Modal isOpen={this.state.modal} toggle={this.toggle}>
-          <ModalHeader toggle={this.toggle}>Login</ModalHeader>
-          <ModalBody>
+          <ModalHeader className="font-link3" toggle={this.toggle} >LOGIN</ModalHeader>
+          <ModalBody className="font-link3">
             {this.state.msg ? (
               <Alert color="danger">{this.state.msg}</Alert>
             ) : null}
             <Form onSubmit={this.onSubmit}>
               <FormGroup>
-                <Label for="email">Email</Label>
+                <Label for="email">EMAIL</Label>
                 <Input
                   type="email"
                   name="email"
                   id="email"
-                  placeholder="Email"
+                  placeholder="EMAIL"
                   className="mb-3"
                   onChange={this.onChange}
                 ></Input>
 
-                <Label for="password">Password</Label>
+                <Label for="password">PASSWORD</Label>
                 <Input
                   type="password"
                   name="password"
                   id="password"
-                  placeholder="Password"
+                  placeholder="PASSWORD"
                   className="mb-3"
                   onChange={this.onChange}
                 ></Input>
-                <Button color="dark" style={{ marginTop: "2rem" }} block>
-                  Login
+                <Button color="dark" style={{ width:"100%", marginTop: "2rem" }} block>
+                  LOGIN
                 </Button>
+
               </FormGroup>
             </Form>
           </ModalBody>
