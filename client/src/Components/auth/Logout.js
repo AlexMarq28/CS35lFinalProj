@@ -17,7 +17,7 @@ export class Logout extends Component {
       
       <Fragment>
         <NavLink onClick={this.props.logout} href="/">
-        <RiLogoutBoxRLine size="1.2em" />
+          <RiLogoutBoxRLine size="1.2em" />
         </NavLink>
       </Fragment>
     );

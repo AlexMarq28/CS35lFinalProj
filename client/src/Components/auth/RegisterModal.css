@@ -2,3 +2,11 @@
     background: green;
     color: #fff;
 }
+
+.font-link3 {
+    font-family: 'Ramabhadra', sans-serif;
+}
+
+.registerButton {
+    margin-top: -30px;
+}

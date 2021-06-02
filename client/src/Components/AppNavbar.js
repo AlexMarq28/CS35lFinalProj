@@ -96,6 +96,7 @@ class AppNavbar extends Component {
             <FaUser size="1.2em" />
           </NavLink>
         </NavItem>
+        {/*
         <NavItem className="icons">
           <Logout />
         </NavItem>
@@ -107,6 +108,7 @@ class AppNavbar extends Component {
         <NavItem className="icons">
           <NavLink>KEY:</NavLink>
         </NavItem>
+          */}
         <NavItem>
           <NavbarDrop />
         </NavItem>

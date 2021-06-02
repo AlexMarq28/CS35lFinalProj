@@ -114,7 +114,7 @@ class LoginModal extends Component {
                   className="mb-3"
                   onChange={this.onChange}
                 ></Input>
-                <Button color="dark" style={{ marginTop: "2rem" }} block>
+                <Button color="dark" style={{ width:"100%", marginTop: "2rem" }} block>
                   LOGIN
                 </Button>
 

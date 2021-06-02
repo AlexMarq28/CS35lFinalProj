@@ -1,3 +1,6 @@
+import { Nav, NavItem, NavLink, Container} from "reactstrap";
+import Logout from "./auth/Logout";
+
 import { useState } from "react";
 import {
   Dropdown,
@@ -20,29 +23,39 @@ const NavbarDrop = (props) => {
       <DropdownToggle color="dark">
         <FaCaretDown size="1.5em" />
       </DropdownToggle>
-      <DropdownMenu className="NavbarDrop">
+      <DropdownMenu className="NavbarDrop" >
         <DropdownItem>
-          <FaHome></FaHome> My Workouts
+            <NavLink  style={{marginLeft: "-5px", color: "black"}} href="/MainProfilePage">
+              <FaHome/> Home
+            </NavLink>
         </DropdownItem>
         <DropdownItem divider />
         <DropdownItem>
-          <BsStopwatch></BsStopwatch> Activity
+          <NavLink  style={{marginLeft: "-5px", color: "black"}} href="/StopwatchPage">
+            <BsStopwatch></BsStopwatch> Activity
+          </NavLink>
         </DropdownItem>
         <DropdownItem divider />
         <DropdownItem>
-          <FaSearch></FaSearch> Search
+          <NavLink  style={{marginLeft: "-5px", color: "black"}} href="/SearchPage">
+            <FaSearch></FaSearch> Search
+          </NavLink>
         </DropdownItem>
         <DropdownItem divider />
         <DropdownItem>
-          <FaUser></FaUser> My Profile
+          <NavLink  style={{marginLeft: "-5px", color: "black"}} href="/ProfilePage">
+            <FaUser></FaUser> My Profile
+          </NavLink>
         </DropdownItem>
         <DropdownItem divider />
         <DropdownItem>
-          <FaGithub /> Github
+          <NavLink style={{marginLeft: "-5px", color: "black"}} href="https://github.com/44cjohnson/CS35lFinalProj">
+            <FaGithub /> Github
+          </NavLink>
         </DropdownItem>
         <DropdownItem divider />
-        <DropdownItem>
-          <RiLogoutBoxRLine /> Log Out
+        <DropdownItem >
+          <Logout/> Logout
         </DropdownItem>
       </DropdownMenu>
     </Dropdown>
