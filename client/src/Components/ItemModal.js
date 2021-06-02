@@ -70,11 +70,11 @@ class ItemModal extends Component {
                   type="text"
                   name="name"
                   id="item"
-                  placeholder="Add exercise item"
+                  placeholder="Add exercise description"
                   onChange={this.onChange}
                 ></Input>
                 <Button color="dark" style={{ marginTop: "2rem" }} block>
-                  Add Item
+                  Add Exercise
                 </Button>
               </FormGroup>
             </Form>

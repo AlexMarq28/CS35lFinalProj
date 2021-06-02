@@ -1,9 +1,46 @@
 body {
-    background-color: #D6D6D7;
+    /*background-color: #fde7d6 !important;*/
+    background-color: #D6D6D7 !important;
 }
 
 .profilePage {
-    background-color: #000000;
+    text-align: center;
+    /*background-image: url("https://cdn2.lamag.com/wp-content/uploads/sites/6/2020/03/los-angeles-gym-closed-danielle-cerullo-CQfNt66ttZM-unsplash-1068x712.jpg");*/
+    /* background-image: url("../img/background7.jpg"); */
+
+    position: fixed;
+    min-width: 100%;
+    min-height: 100%;
+    background-size: cover;
+    background-position: center;
 }
 
+.font-link3 {
+    font-family: 'Ramabhadra', sans-serif;
+}
 
+.left-col {
+    display: flex;
+    align-items: left;
+    justify-content: left;
+    flex: 1;
+    height: 100%;
+}
+
+.right-col {
+    /* display: flex; */
+    /* align-items: left; */
+    /* justify-content: left; */
+    /* flex: 1; */
+    /* height: 100%; */
+    /* margin-right:50px; */
+}
+
+.welcomeMessage{
+    padding-bottom: 20px;
+}
+
+.accountInfoTable {
+    padding-top: 20px;
+    padding-bottom: 20px;
+}

@@ -122,8 +122,8 @@ class RegisterModal extends Component {
                   placeholder="PASSWORD"
                   className="mb-3"
                   onChange={this.onChange}
-                ></Input>
-                <Button color="dark" style={{ marginTop: "2rem" }} block>
+                ></Input> 
+                <Button className="registerButton" color="dark" style={{width:"100%", marginTop: "2rem" }} block>
                   REGISTER
                 </Button>
               </FormGroup>

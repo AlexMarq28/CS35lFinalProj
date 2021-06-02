@@ -2,7 +2,7 @@ import React from "react";
 import { Provider } from "react-redux"; //package that binds together react & redux
 import store from "../store";
 import AppNavbar from "../Components/AppNavbar";
-import { Container, Row } from "reactstrap";
+import { Container, Row, Col} from "reactstrap";
 import "./SearchPage.css";
 import SearchBar from "../Components/SearchBar";
 import CardSearch from "../Components/cards/CardSearch";
@@ -24,12 +24,18 @@ export default function SearchPage() {
               SEARCH
             </h1>
           </div>
-          <Container>
-            <SearchBar />
-            <CardSearch />
-            <CardSearchByTitle />
-            <CardSearchByAuthor />
-          </Container>
+          <Row>
+            <Col xs="2"></Col>
+            <Col>
+              <Container>
+                <SearchBar />
+                <CardSearch />
+                <CardSearchByTitle />
+                <CardSearchByAuthor />
+              </Container>
+            </Col>
+            <Col xs="2"></Col>
+          </Row>
         </div>
       </div>
     </Provider>
