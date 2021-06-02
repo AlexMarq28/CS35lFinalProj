@@ -8,7 +8,7 @@ const router = require('express').Router();
 const multer = require('multer');
 const { v4: uuidv4 } = require('uuid');
 let path = require('path');
-let User = require('../models/user.modal');
+let User = require('../models/item.modal');
 
 const storage = multer.diskStorage({
     destination: function(req, file, cb) {
