@@ -57,7 +57,7 @@ class ItemModal extends Component {
           style={{ marginBottom: "2rem" }}
           onClick={this.toggle}
         >
-          Add Item
+          Add Exercise
         </Button>
 
         <Modal isOpen={this.state.modal} toggle={this.toggle}>
