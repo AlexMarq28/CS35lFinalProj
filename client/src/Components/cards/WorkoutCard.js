@@ -1,3 +1,5 @@
+import { FaThumbsUp } from "react-icons/fa";
+
 import React, { Component } from "react";
 import {
   Card,
@@ -51,7 +53,9 @@ class WorkoutCard extends Component {
             >
               &times;
             </Button>
-            <Button style={{ marginLeft: 10 }}>Like</Button>
+            <Button style={{ background: "#24a0ed", marginLeft: 10 }}>
+              <FaThumbsUp />
+            </Button>
           </CardBody>
         </Card>
       </div>

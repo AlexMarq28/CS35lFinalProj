@@ -147,6 +147,7 @@ class AppNavbar extends Component {
           dark
           expand="sm"
           className="mb-5"
+          fixed="top"
         >
           <Container>
             <div className="navbarBrand">
