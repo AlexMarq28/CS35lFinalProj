@@ -1,3 +1,5 @@
+import "./CardModal.css";
+
 import React, { Component } from "react";
 import {
   Button,
@@ -62,49 +64,62 @@ class CardModal extends Component {
 
   render() {
     return (
-      <div>
+      <div className="cardModal">
         <Button
           color="dark"
+          size="lg"
           style={{ marginBottom: "2rem" }}
           onClick={this.toggle}
         >
-          Add Post
+          CREATE POST
         </Button>
 
         <Modal isOpen={this.state.modal} toggle={this.toggle}>
-          <ModalHeader toggle={this.toggle}>Add To Your Workouts</ModalHeader>
+          <ModalHeader className="font-link3" toggle={this.toggle}>CREATE POST</ModalHeader>
           <ModalBody>
             <Form onSubmit={this.onSubmit}>
-              <FormGroup>
-                <Label for="image">Image</Label>
+              <FormGroup
+              style={{paddingBottom: "15px"}}
+              >
+                <Label className="font-link3" for="image">IMAGE</Label>
                 <Input
+                  className="font-link3"
                   type="text"
                   name="image"
                   id="image"
-                  placeholder="Add image to workout"
+                  // placeholder="ADD IMAGE"
                   onChange={this.onChange}
                 ></Input>
-
-                <Label for="title">Title</Label>
+              </FormGroup>
+              <FormGroup
+                style={{paddingBottom: "15px"}}
+              >
+                <Label className="font-link3" for="title">TITLE</Label>
                 <Input
+                  className="font-link3"
                   type="text"
                   name="title"
                   id="title"
-                  placeholder="Add title to workout"
+                  // placeholder="ADD TITLE"
                   onChange={this.onChange}
                 ></Input>
-
-                <Label for="descript">Description</Label>
+              </FormGroup>
+              <FormGroup
+                style={{paddingBottom: "15px"}}
+              >
+                <Label className="font-link3" for="descript">DESCRIPTION</Label>
                 <Input
-                  type="text"
+                  className="font-link3"
+                  type="textarea"
                   name="descript"
                   id="descript"
-                  placeholder="Add description to workout"
+                  // placeholder="ADD DESCRIPTION"
                   onChange={this.onChange}
                 ></Input>
-
-                <Button color="dark" style={{ marginTop: "2rem" }} block>
-                  Add Post
+              </FormGroup>
+              <FormGroup>
+                <Button size="lg" className="font-link3" color="dark" style={{ width: '100%', marginTop: "2rem" }} block>
+                  ADD POST TO FEED
                 </Button>
               </FormGroup>
             </Form>

@@ -39,7 +39,7 @@ class CardSearch extends Component {
               type="text"
               name="cardSearchTerm"
               // placeholder="SEARCH FOR AN EXERCISE ROUTINE BY CONTENT"
-              placeholder="BY CONTENT"
+              placeholder="BY DESCRIPTION"
               onChange={this.onChange}
             ></Input>
             <Container fluid>

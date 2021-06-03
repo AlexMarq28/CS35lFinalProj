@@ -14,7 +14,7 @@ import ExerciseList from "../Components/ExerciseList";
 export default function StopwatchPage() {
   return (
     <Provider store={store}>
-      <div className="StopwatchPage">
+      <div className="StopwatchPage" style={{height: "100vh"}}>
         <div className="App">
           <AppNavbar />
           <div className="font-link3">
@@ -28,7 +28,7 @@ export default function StopwatchPage() {
           <Container>
             <Stopwatch />
           </Container>
-          <div className="otherButtons">
+          <div className="otherButtons" style={{paddingBottom: "40px"}} >
             <ItemModal />
             <ExerciseList />
           </div>
