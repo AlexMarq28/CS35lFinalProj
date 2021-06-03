@@ -37,7 +37,8 @@ class CardSearchByAuthor extends Component {
             <Input className="font-link3"
               type="text"
               name="cardSearchAuthor"
-              placeholder="SEARCH FOR AN EXERCISE ROUTINE BY AUTHOR"
+              // placeholder="SEARCH FOR AN EXERCISE ROUTINE BY AUTHOR"
+              placeholder="BY AUTHOR"
               onChange={this.onChange}
             ></Input>
             <Container fluid>

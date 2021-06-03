@@ -1,3 +1,8 @@
+import image from "../../img/image1.jpg";
+
+import "./WorkoutCard.css";
+import { FaThumbsUp } from "react-icons/fa";
+
 import React, { Component } from "react";
 import {
   Card,
@@ -31,12 +36,15 @@ class WorkoutCard extends Component {
       <div>
         <Card>
           <CardImg
-            top
+            // top
             width="100%"
-            src="/assets/318x180.svg"
+            // src="/assets/318x180.svg"
+            src={image}
             alt="Card image cap"
           />
-          <CardBody>
+          <CardBody >
+            <div className="cardBody">
+            {/* <CardImg top width="100%" src={image} alt="Card image cap" /> */}
             <CardTitle tag="h5">{this.props.card.title}</CardTitle>
             <CardSubtitle tag="h6" className="mb-2 text-muted">
               {this.props.card.subtitle}
@@ -49,9 +57,12 @@ class WorkoutCard extends Component {
               //id comes from the item we got from this.props.item
               onClick={this.onDeleteClick.bind(this, this.props.card._id)}
             >
-              &times;
+              &times; {' '} Delete
             </Button>
-            <Button style={{ marginLeft: 10 }}>Like</Button>
+            <Button style={{ background: "#24a0ed", marginLeft: 10 }}>
+              <FaThumbsUp />{ } Like
+            </Button>
+            </div>
           </CardBody>
         </Card>
       </div>

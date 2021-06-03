@@ -10,11 +10,26 @@ This is also based on Ernests excellent design and changed the photo to one of t
     /*background-image: url("https://cdn2.lamag.com/wp-content/uploads/sites/6/2020/03/los-angeles-gym-closed-danielle-cerullo-CQfNt66ttZM-unsplash-1068x712.jpg");*/
     background-image: url("../img/background5.jpg");
 
-    position: fixed;
+    /* position: fixed;
     min-width: 100%;
     min-height: 100%;
     background-size: cover;
     background-position: center;
+
+    overflow-y: scroll;
+    height: auto; */
+
+    /* position: fixed; */
+    min-width: 100%;
+    min-height: 100%;
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
+    
+    /* overflow: auto; */
+    overflow-y: scroll;
+    height: auto;
+    padding-top: 100px;
 }
 
 .SearchPageBackground {
@@ -42,3 +57,9 @@ This is also based on Ernests excellent design and changed the photo to one of t
 .fade-in {
     opacity: 1;
 }
+
+/* .cardList {
+    padding-top: 100px;
+    padding-bottom: 100px;
+} */
+

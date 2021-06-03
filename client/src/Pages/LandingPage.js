@@ -1,3 +1,5 @@
+import { FaGithub } from "react-icons/fa";
+
 /* ----------------------------------------------------------------------------------------------------*/
 /* Ernest (3:42PM, 5/29/2021)
 Update: 
@@ -19,7 +21,7 @@ import Exerciselist from "../Components/ExerciseList";
 import PhotoFrame from "../Components/PhotoFrame";
 import ItemModal from "../Components/ItemModal";
 import PhotoModal from "../Components/PhotoModal";
-import { Container } from "reactstrap";
+import { NavLink, Jumbotron, Button, Container, Row, Col } from "reactstrap";
 //import "./App.css";
 
 //import LoginUser from "../Components/LoginUser/LoginUser.js";
@@ -30,7 +32,35 @@ export default function LandingPage() {
     <Provider store={store}>
       <div className="LandingPage">
         <div className="App">
+      <div id="everythingButWelcome" className="nameFadeIn">
           <AppNavbar />
+      </div>
+          <div>
+      <Jumbotron>
+        <div className="fade-in">
+          <h1 className="font-link3" style={{color: "#fffff0", fontSize: 116, paddingTop: 60, paddingBottom: 30}}>WELCOME</h1>
+        </div>
+        <div id="everythingButWelcome" className="nameFadeIn">
+          <p className="lead" style={{color: "#fffff0", fontSize: 24}}>
+            {/* <div className="font-link3"> */}
+              <span style={{fontWeight: "bold"}}>milestone </span> is the social fitness application for gym rats, weekend warriors, and spring-quarter burnouts.
+            {/* </div> */}
+          </p>
+          <hr className="my-2" />
+          <p style={{fontSize: 20, paddingBottom: 48}}>Share your workouts. View posts by others for inspiration. Set new PR's using our built-in stopwatch.</p>
+          <p className="lead">
+            <Button color="dark" size="lg">
+            <NavLink className="font-link3" style={{ color: "#fffff0"}} href="https://github.com/44cjohnson/CS35lFinalProj">
+              <FaGithub />{' '} GITHUB
+            </NavLink>
+            </Button>
+          </p>
+        </div>
+      </Jumbotron>
+      </div>
+
+    </div>
+    {/* 
           <div className="font-link3">
             <h1
               className="landingPageMessage"
@@ -47,6 +77,46 @@ export default function LandingPage() {
             <h4 className="font-link3">DENVER LEE BROWN</h4>
             <h4 className="font-link3">ERNEST KIM</h4>
           </div>
+          */}
+          <div class="footer">
+            <Row>
+              <Col>
+                <p  className="font-link3">
+                  <div id="first" className="nameFadeIn">
+                    OLUCHI NZEREM
+                  </div>
+                </p>
+              </Col>
+              <Col>
+                <p className="font-link3">
+                  <div id="second" className="nameFadeIn">
+                    ALEJANDRO MARQUEZ
+                  </div>
+                </p>
+              </Col>
+              <Col>
+                <p className="font-link3">
+                  <div id="third" className="nameFadeIn">
+                    COLIN JOHNSON
+                  </div>
+                </p>
+              </Col>
+              <Col>
+                <p className="font-link3">
+                  <div id="fourth" className="nameFadeIn">
+                    DENVER LEE BROWN
+                  </div>
+                </p>
+              </Col>
+              <Col>
+                <p className="font-link3">
+                  <div  id="fifth" className="nameFadeIn">
+                    ERNEST KIM
+                  </div>
+                </p>
+              </Col>
+            </Row>
+
         </div>
       </div>
     </Provider>

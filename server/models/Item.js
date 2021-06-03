@@ -1,15 +1,21 @@
+
 const mongoose = require("mongoose");
 const Schema = mongoose.Schema;
 
-@@ -11,9 +13,35 @@ const ItemSchema = new Schema({
+//Creating a schema
+const ItemSchema = new Schema({
+  name: {
+    type: String,
+    required: true,
+  },
+  date: {
     type: Date,
     default: Date.now,
   },
- 
-   email: {
+  email: {
     type: String,
   },
-   author: {
+ author: {
     type: String,
     required: true,
    description: {
@@ -27,7 +33,7 @@ const Schema = mongoose.Schema;
    },
      picture: {
        type: String,
-       required: true,
+       
      },
      tags: [{
 	 type: String
@@ -39,13 +45,3 @@ const Schema = mongoose.Schema;
 
 
 module.exports = Item = mongoose.model("item", ItemSchema);
-
-
-
-
-
-
-
-
-
-

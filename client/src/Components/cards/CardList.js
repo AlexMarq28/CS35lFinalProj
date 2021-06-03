@@ -1,3 +1,5 @@
+import "./CardList.css";
+
 import React, { Component } from "react";
 import { Container, Row, Col, ListGroup, ListGroupItem } from "reactstrap";
 import { CSSTransition, TransitionGroup } from "react-transition-group";
@@ -53,16 +55,20 @@ class CardList extends Component {
 
     let workoutCards = arrCards.map((card) => {
       return (
-        <Col sm="4">
+        /*<Col sm="4">
           <WorkoutCard card={card} />
-        </Col>
+      </Col> */
+        <WorkoutCard card={card} />
       );
     });
     //render the cards
     return (
-      <Container fluid>
-        <Row>{workoutCards}</Row>
-      </Container>
+      <div className="workoutCards">
+        <Container className="workoutCards" fluid style={{maxWidth: "600px"}}>
+          <Row >{workoutCards}</Row>
+        </Container>
+      </div>
+
     );
   }
 }
