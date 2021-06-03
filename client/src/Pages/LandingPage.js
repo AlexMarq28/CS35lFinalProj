@@ -21,7 +21,7 @@ import Exerciselist from "../Components/ExerciseList";
 import PhotoFrame from "../Components/PhotoFrame";
 import ItemModal from "../Components/ItemModal";
 import PhotoModal from "../Components/PhotoModal";
-import { NavLink, Jumbotron, Button, Container } from "reactstrap";
+import { NavLink, Jumbotron, Button, Container, Row, Col } from "reactstrap";
 //import "./App.css";
 
 //import LoginUser from "../Components/LoginUser/LoginUser.js";
@@ -32,10 +32,12 @@ export default function LandingPage() {
     <Provider store={store}>
       <div className="LandingPage">
         <div className="App">
+      <div className="fade-in">
+
           <AppNavbar />
           <div>
       <Jumbotron>
-        <h1 className="font-link3" style={{color: "#fffff0", fontSize: 116, paddingTop: 60, paddingBottom: 30}}>WELCOME</h1>
+          <h1 className="font-link3" style={{color: "#fffff0", fontSize: 116, paddingTop: 60, paddingBottom: 30}}>WELCOME</h1>
         <p className="lead" style={{color: "#fffff0", fontSize: 24}}>
           {/* <div className="font-link3"> */}
             <span style={{fontWeight: "bold"}}>milestone </span> is the social fitness application for gym rats, weekend warriors, and spring-quarter burnouts.
@@ -51,6 +53,8 @@ export default function LandingPage() {
           </Button>
         </p>
       </Jumbotron>
+      </div>
+
     </div>
     {/* 
           <div className="font-link3">
@@ -70,6 +74,46 @@ export default function LandingPage() {
             <h4 className="font-link3">ERNEST KIM</h4>
           </div>
           */}
+          <div class="footer">
+            <Row>
+              <Col>
+                <p  className="font-link3">
+                  <div id="first" className="nameFadeIn">
+                    OLUCHI NZEREM
+                  </div>
+                </p>
+              </Col>
+              <Col>
+                <p className="font-link3">
+                  <div id="second" className="nameFadeIn">
+                    ALEJANDRO MARQUEZ
+                  </div>
+                </p>
+              </Col>
+              <Col>
+                <p className="font-link3">
+                  <div id="third" className="nameFadeIn">
+                    COLIN JOHNSON
+                  </div>
+                </p>
+              </Col>
+              <Col>
+                <p className="font-link3">
+                  <div id="fourth" className="nameFadeIn">
+                    DENVER LEE BROWN
+                  </div>
+                </p>
+              </Col>
+              <Col>
+                <p className="font-link3">
+                  <div  id="fifth" className="nameFadeIn">
+                    ERNEST KIM
+                  </div>
+                </p>
+              </Col>
+            </Row>
+
+          </div>
         </div>
       </div>
     </Provider>
