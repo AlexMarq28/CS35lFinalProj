@@ -32,26 +32,30 @@ export default function LandingPage() {
     <Provider store={store}>
       <div className="LandingPage">
         <div className="App">
-      <div className="fade-in">
-
+      <div id="everythingButWelcome" className="nameFadeIn">
           <AppNavbar />
+      </div>
           <div>
       <Jumbotron>
+        <div className="fade-in">
           <h1 className="font-link3" style={{color: "#fffff0", fontSize: 116, paddingTop: 60, paddingBottom: 30}}>WELCOME</h1>
-        <p className="lead" style={{color: "#fffff0", fontSize: 24}}>
-          {/* <div className="font-link3"> */}
-            <span style={{fontWeight: "bold"}}>milestone </span> is the social fitness application for gym rats, weekend warriors, and spring-quarter burnouts.
-          {/* </div> */}
-        </p>
-        <hr className="my-2" />
-        <p style={{fontSize: 20, paddingBottom: 48}}>Share your workouts. View posts by others for inspiration. Set new PR's using our built-in stopwatch.</p>
-        <p className="lead">
-          <Button color="dark" size="lg">
-          <NavLink className="font-link3" style={{ color: "#fffff0"}} href="https://github.com/44cjohnson/CS35lFinalProj">
-            <FaGithub />{' '} GITHUB
-          </NavLink>
-          </Button>
-        </p>
+        </div>
+        <div id="everythingButWelcome" className="nameFadeIn">
+          <p className="lead" style={{color: "#fffff0", fontSize: 24}}>
+            {/* <div className="font-link3"> */}
+              <span style={{fontWeight: "bold"}}>milestone </span> is the social fitness application for gym rats, weekend warriors, and spring-quarter burnouts.
+            {/* </div> */}
+          </p>
+          <hr className="my-2" />
+          <p style={{fontSize: 20, paddingBottom: 48}}>Share your workouts. View posts by others for inspiration. Set new PR's using our built-in stopwatch.</p>
+          <p className="lead">
+            <Button color="dark" size="lg">
+            <NavLink className="font-link3" style={{ color: "#fffff0"}} href="https://github.com/44cjohnson/CS35lFinalProj">
+              <FaGithub />{' '} GITHUB
+            </NavLink>
+            </Button>
+          </p>
+        </div>
       </Jumbotron>
       </div>
 
@@ -113,7 +117,6 @@ export default function LandingPage() {
               </Col>
             </Row>
 
-          </div>
         </div>
       </div>
     </Provider>

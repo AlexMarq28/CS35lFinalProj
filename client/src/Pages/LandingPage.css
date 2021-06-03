@@ -68,7 +68,7 @@ Will continue to work on it.
  }
 
  .fade-in {
-     animation: fadeIn 6s;
+     animation: fadeIn 3s;
  }
 
  @keyframes fadeIn {
@@ -85,18 +85,22 @@ Will continue to work on it.
     animation: fadeIn 6s forwards;
   }
 
- #first {
-     animation-delay: 1s;
- }
- #second {
+#everythingButWelcome {
     animation-delay: 2s;
 }
+
+ #first {
+     animation-delay: 4s;
+ }
+ #second {
+    animation-delay: 5s;
+}
 #third {
-    animation-delay: 3s;
+    animation-delay: 6s;
 }
 #fourth {
-    animation-delay: 4s;
+    animation-delay: 7s;
 }
 #fifth {
-    animation-delay: 5s;
+    animation-delay: 8s;
 }
