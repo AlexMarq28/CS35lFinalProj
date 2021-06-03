@@ -1,3 +1,5 @@
+import image from "../../img/image1.jpg";
+
 import "./WorkoutCard.css";
 import { FaThumbsUp } from "react-icons/fa";
 
@@ -34,13 +36,15 @@ class WorkoutCard extends Component {
       <div>
         <Card>
           <CardImg
-            top
+            // top
             width="100%"
-            src="/assets/318x180.svg"
+            // src="/assets/318x180.svg"
+            src={image}
             alt="Card image cap"
           />
           <CardBody >
             <div className="cardBody">
+            {/* <CardImg top width="100%" src={image} alt="Card image cap" /> */}
             <CardTitle tag="h5">{this.props.card.title}</CardTitle>
             <CardSubtitle tag="h6" className="mb-2 text-muted">
               {this.props.card.subtitle}
