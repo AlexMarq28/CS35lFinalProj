@@ -38,7 +38,7 @@ export default function LandingPage() {
         <h1 className="font-link3" style={{color: "#fffff0", fontSize: 116, paddingTop: 60, paddingBottom: 30}}>WELCOME</h1>
         <p className="lead" style={{color: "#fffff0", fontSize: 24}}>
           {/* <div className="font-link3"> */}
-            <span style={{fontWeight: "bold"}}>milestone </span> is a social fitness application for gym rats, weekend warriors, and spring-quarter burnouts.
+            <span style={{fontWeight: "bold"}}>milestone </span> is the social fitness application for gym rats, weekend warriors, and spring-quarter burnouts.
           {/* </div> */}
         </p>
         <hr className="my-2" />

@@ -28,7 +28,7 @@ class SearchBar extends Component {
         <Input className="font-link3"
           type="text"
           name="search"
-          placeholder="SEARCH FOR AN EXERCISE"
+          placeholder="BY EXERCISE"
           onChange={this.onChange}
             ></Input>
         <ListGroup>

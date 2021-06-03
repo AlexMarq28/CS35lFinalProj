@@ -18,7 +18,7 @@ export default function MainProfilePage() {
           <div className="font-link3">
             <h1
               className="mainProfilePageMessage"
-              style={{ color: "black", fontSize: 40, paddingBottom: 25 }}
+              style={{ color: "black", fontSize: 72, paddingBottom: 25 }}
             >
               FEED
             </h1>

@@ -19,7 +19,7 @@ This is also based on Ernests excellent design and changed the photo to one of t
     overflow-y: scroll;
     height: auto; */
 
-    position: fixed;
+    /* position: fixed; */
     min-width: 100%;
     min-height: 100%;
     background-size: cover;
@@ -30,7 +30,6 @@ This is also based on Ernests excellent design and changed the photo to one of t
     overflow-y: scroll;
     height: auto;
     padding-top: 100px;
-
 }
 
 .SearchPageBackground {

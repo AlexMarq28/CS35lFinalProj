@@ -20,7 +20,7 @@ export default function StopwatchPage() {
           <div className="font-link3">
             <h1
               className="StopwatchPageMessage"
-              style={{ color: "black", fontSize: 40 }}
+              style={{ color: "black", fontSize: 72 }}
             >
               STOPWATCH
             </h1>

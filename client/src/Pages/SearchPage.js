@@ -13,7 +13,7 @@ import CardSearchByAuthor from "../Components/cards/CardSearchByAuthor";
 export default function SearchPage() {
   return (
     <Provider store={store}>
-      <div className="SearchPage">
+      <div className="SearchPage" style={{height: "100vh"}}>
         <div className="App">
           <AppNavbar />
           <div className="font-link3">
@@ -28,10 +28,18 @@ export default function SearchPage() {
             <Col xs="2"></Col>
             <Col>
               <Container>
-                <SearchBar />
-                <CardSearch />
-                <CardSearchByTitle />
-                <CardSearchByAuthor />
+                <div style={{paddingBottom: 0}}>
+                  <SearchBar />
+                </div>
+                <div style={{paddingBottom: 0}}>
+                  <CardSearch />
+                </div>
+                <div style={{paddingBottom: 0}}>
+                  <CardSearchByTitle />
+                </div>
+                <div style={{paddingBottom: 0}}>
+                  <CardSearchByAuthor />
+                </div>
               </Container>
             </Col>
             <Col xs="2"></Col>
