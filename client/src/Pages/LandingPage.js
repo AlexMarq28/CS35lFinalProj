@@ -1,3 +1,5 @@
+import { FaGithub } from "react-icons/fa";
+
 /* ----------------------------------------------------------------------------------------------------*/
 /* Ernest (3:42PM, 5/29/2021)
 Update: 
@@ -19,7 +21,7 @@ import Exerciselist from "../Components/ExerciseList";
 import PhotoFrame from "../Components/PhotoFrame";
 import ItemModal from "../Components/ItemModal";
 import PhotoModal from "../Components/PhotoModal";
-import { Container } from "reactstrap";
+import { NavLink, Jumbotron, Button, Container } from "reactstrap";
 //import "./App.css";
 
 //import LoginUser from "../Components/LoginUser/LoginUser.js";
@@ -31,6 +33,26 @@ export default function LandingPage() {
       <div className="LandingPage">
         <div className="App">
           <AppNavbar />
+          <div>
+      <Jumbotron>
+        <h1 className="font-link3" style={{color: "#fffff0", fontSize: 116, paddingTop: 60, paddingBottom: 30}}>WELCOME</h1>
+        <p className="lead" style={{color: "#fffff0", fontSize: 24}}>
+          {/* <div className="font-link3"> */}
+            <span style={{fontWeight: "bold"}}>milestone </span> is a social fitness application for gym rats, weekend warriors, and spring-quarter burnouts.
+          {/* </div> */}
+        </p>
+        <hr className="my-2" />
+        <p style={{fontSize: 20, paddingBottom: 48}}>Share your workouts. View posts by others for inspiration. Set new PR's using our built-in stopwatch.</p>
+        <p className="lead">
+          <Button color="dark" size="lg">
+          <NavLink className="font-link3" style={{ color: "#fffff0"}} href="https://github.com/44cjohnson/CS35lFinalProj">
+            <FaGithub />{' '} GITHUB
+          </NavLink>
+          </Button>
+        </p>
+      </Jumbotron>
+    </div>
+    {/* 
           <div className="font-link3">
             <h1
               className="landingPageMessage"
@@ -47,6 +69,7 @@ export default function LandingPage() {
             <h4 className="font-link3">DENVER LEE BROWN</h4>
             <h4 className="font-link3">ERNEST KIM</h4>
           </div>
+          */}
         </div>
       </div>
     </Provider>
