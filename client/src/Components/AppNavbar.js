@@ -153,7 +153,7 @@ class AppNavbar extends Component {
             <div className="navbarBrand">
               <NavbarBrand
                 className="font-link"
-                href="/"
+                href="/MainProfilePage"
                 style={{ color: "#fffff0", fontSize: 36 }}
               >
                 <FaShoePrints className="logo" size="1em" />
